@@ -1,0 +1,31 @@
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 27px;
+    padding-left: 75px;
+    padding-right: 75px;
+
+    &__title {
+        max-width: 1100px;
+        margin: 0 auto;
+        text-align: center;
+        @extend .font__title;
+    }
+
+    &__description {
+        margin: 0 auto;
+        margin-top: 20px;
+        max-width: 785px;
+        text-align: center;
+        @extend .font__descrition;
+    }
+
+    &__button {
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+}
+
+
+

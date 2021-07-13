@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' href='dist/style.css'>
+    <link rel='stylesheet' href='style.css'>
     <title>Document</title>
 </head>
 <body class="root">
@@ -33,7 +33,42 @@
             </ul>
         </header>
         <main class="main">
-            
+            <section class="heading">
+                <h1 class="heading__title">CRM-система для автоматизации сервисных центров и мастерских</h1>
+                <p class="heading__description">Единая база заказов и клиентов, онлайн-касса, расчёт зарплаты, контроль рекламы, складской учёт, статистика, менеджер задач, продажи, SMS уведомления клиентам.</p>
+                <button type="button" class="button button__yellow heading__button">Попробовать бесплатно</button>
+            </section>
+            <section class="automation">
+                <h2 class="automation__title">Умная автоматизация сервисных центров и мастерских</h2>
+                <p class="automation__description">LiveSklad - подойдет для каждого!</p>
+
+                <div class="automation__slider">
+                    <div class="automation__slider-navigation">
+                        <div class="automation__slider-arrow automation__slider-arrow_rotate">
+                            <img src="<%=require('../images/arrow.png')%>" alt="Влево" class="automation__slider-arrow-image automation__slider-arrow_rotate">
+                        </div>
+                        <div class="automation__slider-item-overlay-active">
+                            <p class="automation__slider-item-title">Ремонт электроники</p>
+                            <button type="button" class="button button__yellow automation__slider-button">Попробовать бесплатно</button>
+                        </div>
+                        
+                        <div class="automation__slider-arrow">
+                            <img src="<%=require('../images/arrow.png')%>" alt="Вправо" class="automation__slider-arrow-image automation__slider-arrow_rotate">
+                        </div>
+                    </div>
+
+                    
+                    <img src="<%=require('../images/slide1.jpg')%>" class="automation__slider-item" alt="Слайд">
+                    <img src="<%=require('../images/slide2.jpg')%>" class="automation__slider-item" alt="Слайд">
+                    <img src="<%=require('../images/slide3.png')%>" class="automation__slider-item automation__slider-item_active" alt="Слайд">
+                    <img src="<%=require('../images/slide4.jpg')%>" class="automation__slider-item" alt="Слайд">
+                    <img src="<%=require('../images/slide5.jpg')%>" class="automation__slider-item" alt="Слайд">
+                    <img src="<%=require('../images/slide6.jpg')%>" class="automation__slider-item" alt="Слайд">
+                    <img src="<%=require('../images/slide7.jpg')%>" class="automation__slider-item" alt="Слайд">
+
+                </div>
+            </section>
+                
         </main>
 
         <footer class="footer">
