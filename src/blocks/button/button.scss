@@ -1,18 +1,31 @@
 .button {
     border: 0;
     height: fit-content;
-    border-radius: 33px;
+    width: fit-content;
     padding: 11.5px 20px;
     font-family: 'Formular';
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
+    box-shadow: 12px 17px 50px rgba(0, 0, 0, 0.13);
+    border-radius: 59px;
+    cursor: pointer;
 }
 
 .button__blue {
     background-color: #538DFF;
     color: #FFFFFF;
+}
+
+.button__yellow {
+    background-color: #FFCF5C;
+}
+
+.button__yellow:hover {
+    background-color: #FFCF5C;
+    
+
 }
 
 .button__blue:hover {
@@ -26,7 +39,7 @@
     border: 0;
     border-radius: 50px;
     background-color: #538DFF;
-    background-image: url(../../images/fi_user.svg);
+    background-image: '../../images/fi_user.svg';
     background-position: center;
     background-repeat: no-repeat;
 
