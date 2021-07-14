@@ -1,0 +1,22 @@
+.navigation-arrow {
+    
+    &__button {
+        border: none;
+        width: 54px;
+        height: 36px;
+        background-color: #FFFFFF;
+        border-radius: 6px 0px 0px 6px;
+        background-image: url('../images/fi_arrow-left.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+
+        &_rotate {            
+            border-radius: 0px 6px 6px 0px;
+            background-image: url('../images/fi_arrow-right.svg');
+        }
+
+        &_blue {
+            background-color: #538DFF;
+        }
+    }
+}

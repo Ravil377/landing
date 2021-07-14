@@ -1,0 +1,68 @@
+.vozmognosti {
+    padding-left: 75px;
+    padding-right: 75px;
+
+    &__title {
+        @extend .font__title;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+    }
+    &__info-navigation {
+        max-width: 410px;
+        margin-right: 28px;
+    }
+    &__info-navigation-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        &-item {
+            margin-bottom: 9px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    
+  
+    &__info-description {
+        padding: 30px;
+        width: -webkit-fill-available;
+        background: #F8F8FA;
+        border-radius: 20px;
+        border: 1px solid blue;
+        &-title {
+            @extend .font__razdel;
+        }
+    }
+
+    &__info-description-list {
+        padding: 0;
+        margin: 0;
+        margin-top: 30px;
+        list-style: disc;
+        margin-left: 18px;
+        color: #0084F4;
+
+        span {
+            color: #84899B;
+        }
+
+        &-item {
+            margin-bottom: 30px;
+            @extend .font__descrition;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    
+    
+}

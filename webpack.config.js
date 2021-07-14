@@ -19,14 +19,9 @@ module.exports = {
   },
   module: {
     rules: [
-      // rules — это массив правил
-      // добавим в него объект правил для бабеля
       {
-        // регулярное выражение, которое ищет все js файлы
         "test": /\.js$/,
-        // при обработке этих файлов нужно использовать babel-loader
         "use": "babel-loader",
-        // исключает папку node_modules, файлы в ней обрабатывать не нужно
         "exclude": "/node_modules/",
       },
       {
@@ -46,10 +41,7 @@ module.exports = {
         ],
       },
       {
-        // применять это правило только к CSS-файлам
         test: /\.css$/,
-        // при обработке этих файлов нужно использовать
-        // MiniCssExtractPlugin.loader и css-loader
         use: [
           MiniCssExtractPlugin.loader,
           {
@@ -58,7 +50,7 @@ module.exports = {
           },
           "postcss-loader",
         ],
-      },
+      }
     ],
   },
   plugins: [
