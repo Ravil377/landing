@@ -9,10 +9,13 @@
     }
 
     &__description {
+        margin: 0;
         margin-left: 75px;
         margin-right: 75px;
         margin-top: 13px;
-        @extend .font__descrition;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 22px;
     }
 
     &__slider {
@@ -20,6 +23,10 @@
         display: flex;
         margin-top: 40px;
         height: 278px;
+
+        &-button {
+            width: 224px;
+        }
     }
 
     &__slider-navigation {

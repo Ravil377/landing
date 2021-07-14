@@ -1,0 +1,41 @@
+.question-answer {
+    margin-top: 70px;
+    margin-left: 75px;
+    margin-right: 75px;
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        margin-top: 38px;
+        list-style: none;
+
+        &-item {
+            margin-bottom: 28px;
+            
+            &-image {
+                width: 35px;
+                height: 35px;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &-section {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            &-title {
+                margin: 0;
+                font-weight: bold;
+                font-size: 26px;
+                line-height: 32px;
+                color: #3E454D;
+
+                &_active {
+                    color: #538DFF;
+                }
+            }
+        }
+    }
+}

@@ -1,37 +1,66 @@
 .root {
     font-family: "Formular", sans-serif;
     border-color: #F8F8FA;
+    font-style: normal;
 }
 
+$background-color-card: #FFFFFF; 
+$background-color-card-description: #3E454D;
+.font__card-name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #84899B;
+}
+
+.font__card-price {
+    font-weight: bold;
+    font-size: 59px;
+    line-height: 72px;
+}
+
+.font__card-price-description {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.font__card-description {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+
+
+
+
+
 .font_normal {
-    font-style: normal;
     font-weight: normal;
 }
 
 .font_bold {
-    font-style: normal;
     font-weight: bold;
 }
 
 .font_700 {
-    font-style: normal;
     font-weight: 700;
 }
 
 .font_500 {
-    font-style: normal;
     font-weight: 500;
 }
 
 
 .font-400 {
-    font-style: normal;
     font-weight: 400;
 }
 
 $text-color-white: #FFF;
 $text-color-black: #000;
 $text-color-blue: #538DFF;
+$text-color-link: #647CFF;
 
 .font__title {
     margin: 0;

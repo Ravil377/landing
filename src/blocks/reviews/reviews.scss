@@ -1,0 +1,136 @@
+.font-review-name {
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 32px;
+    color: #1C1C25;
+}
+
+.font-review {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #3E454D;
+}
+
+.font-review-plus-minus {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #538DFF;
+}
+
+.font-like {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+
+.reviews {
+    padding-top: 55px;
+    padding-left: 75px;
+    padding-right: 75px;
+
+    &__block {
+        display: flex;
+        margin-top: 40px;
+
+        &-shadow {
+
+        }
+
+        &-review {
+            width: 944px;
+            margin: 0;
+            padding: 0;
+            margin-right: 42px;
+            padding-top: 30px;
+            padding-left: 56px;
+            padding-bottom: 74px;
+            position: relative;
+            list-style: none;
+            max-width: 944px;
+            background: #FFFFFF;
+            box-shadow: 20px 26px 76px rgba(0, 0, 0, 0.11);
+            border-radius: 20px;
+
+            &::before {
+                content: '';
+                top: 15px;
+                left: 270px;
+                width: 692px;
+                height: 305px;
+                position: absolute;
+                background: #B9CFFE;
+                opacity: 0.67;
+                border-radius: 20px;
+                z-index: -1;
+            }
+
+            &::after {
+                content: '';
+                top: 0;
+                left: 186px;
+                width: 768px;
+                height: 337px;
+                position: absolute;
+                background: #B9CFFE;
+                opacity: 0.67;
+                border-radius: 20px;
+                z-index: -2;
+            }
+
+            &-item {
+                max-width: 578px;
+                
+                &_mt20  {
+                    margin-top: 20px;
+                }
+
+                &_mt26 {
+                    margin-top: 26px;
+                }
+
+                &_mt10 {
+                    margin-top: 10px;
+                }
+            }
+            
+
+            &-image {
+                right: 59px;
+                top: 21px;
+                position: absolute;
+            }
+        }
+        &-like {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 48px;
+            padding-bottom: 39px;
+            padding-left: 30px;
+            padding-right: 30px;
+            background: linear-gradient(97.54deg, #538DFF 0%, #865BFF 100%);
+            border-radius: 20px;
+            max-width: 244px;
+            
+            &-image {
+                max-width: 81px;
+                object-fit: contain;
+
+                &-crm {
+                    width: 100%;
+                }
+            }
+
+            &-description {
+                margin: 0;
+            }
+            
+        }
+    }
+}

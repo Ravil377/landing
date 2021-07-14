@@ -1,0 +1,127 @@
+.tarif {
+    padding-top: 18px;
+    padding-left: 75px;
+    padding-right: 75px;
+
+    &__title-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__navigation {
+        height: 61px;
+        background: #FFFFFF;
+        border: 1px solid #DEE1EA;
+        border-radius: 20px;
+
+        &-list {
+            list-style: none;
+            display: flex;
+            margin: 0;
+
+            &-item {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                margin-right: 4px;
+                width: 138px;
+                height: 53px;
+                border-radius: 13px;
+                @extend .font_normal;
+                font-size: 12px;
+                line-height: 15px;
+
+                &_bold {
+                    @extend .font_bold;
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+
+                &_active {
+                    background: linear-gradient(97.54deg, #538DFF 0%, #865BFF 100%);
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    &__card {
+        padding: 0;
+        margin: 0;
+        margin-top: 37px;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+
+        &-description {
+            color: $background-color-card-description;
+
+            &_active {
+                color: #FFFFFF;
+            }
+        }
+
+        &-item {
+            padding-top: 24px;
+            padding-left: 24px;
+            padding-right: 24px;
+            padding-bottom: 44px;
+
+            background: $background-color-card;
+            border: 1px solid #DEE1EA;
+            box-sizing: border-box;
+            border-radius: 20px;
+            max-width: 305px;
+            height: 305px;
+
+            &_active {
+                background: linear-gradient(97.54deg, #538DFF 0%, #865BFF 100%);
+                box-shadow: 20px 26px 76px rgba(0, 0, 0, 0.11);
+            }
+
+            &-line {
+                margin-top: 40px;
+                padding-top: 18px;
+                padding-bottom: 20px;
+                border-top: 1px solid #DEE1EA;
+
+                &_active {
+                    color: #FFFFFF;
+                    border-top: 1px solid #538DFF;
+                }
+            }
+            &-list {
+                list-style: none;
+                padding: 0;
+            }
+
+            &-name {
+                margin: 0;
+                padding: 0;
+                padding-bottom: 6px;
+
+                &_active {
+                    color: #B9CFFE;
+                }
+            }
+
+            &-price {
+                background: linear-gradient(97.54deg, #538DFF 0%, #865BFF 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                &_active {
+                    background: #fff;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+
+

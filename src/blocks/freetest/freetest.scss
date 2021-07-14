@@ -1,0 +1,30 @@
+.freetest {
+    margin-left: 75px;
+    margin-right: 75px;
+    position: relative;
+    margin-top: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 49px;
+    padding-bottom: 49px;
+    padding-right: 29px;
+    background: #EDF7FD;
+    border-radius: 20px;
+
+    &__text {
+        margin: 0;
+        max-width: 493px;
+        font-weight: bold;
+        font-size: 23px;
+        line-height: 28px;      
+        color: #1C1C25;
+        margin-right: 205px;
+    }
+
+    &__image {
+        left: 59px;
+        bottom: 17px;
+        position: absolute;
+    }
+}
