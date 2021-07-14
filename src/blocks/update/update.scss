@@ -1,0 +1,65 @@
+.update {
+    margin-top: 70px;
+    margin-left: 75px;
+    margin-right: 75px;
+
+    &__list {
+        padding: 0;
+        margin-top: 40px;
+        list-style: none;
+        display: flex;
+        
+        &-item {
+            max-width: 300px;
+            width: 100%;
+            padding: 30px;
+            border-radius: 20px;
+            margin-right: 30px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+            &-image {
+                width: 43px;
+                height: 43px;
+            }
+            &_pink {
+                background: #ffe9dc;
+            }
+
+            &_light-blue {
+                background: #dce7ff;
+            }
+
+            &_light-fiolet {
+                background: #e2dbfe;
+            }
+
+            &_light-green {
+                background: #ddffe4;
+            }
+            &-description {
+                margin: 0;
+                margin-top: 30px;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 24px;
+                color: #1C1C25;
+            }
+
+            &-date {
+                margin: 0;
+                margin-top: 75px;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 20px;
+                color: #1C1C25;
+                opacity: 0.6;
+            }
+        }
+    }
+    &__title-block {
+        display: flex;
+        justify-content: space-between;
+    }
+}

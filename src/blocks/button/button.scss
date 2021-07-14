@@ -1,8 +1,7 @@
 .button {
     border: 0;
-    height: fit-content;
-    width: fit-content;
-    padding: 11.5px 20px;
+    height: 60px;
+    width: 278px;
     font-family: 'Formular';
     font-style: normal;
     font-weight: 500;
@@ -13,13 +12,18 @@
     cursor: pointer;
 
     &_radius-14 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 20px;
+        padding-left: 22px;
         display: flex;
         align-items: center;
-        height: 60px;
+        height: 69px;
         border-radius: 14px;
         background-color: #B9CFFE;
         box-shadow: 12px 17px 50px rgba(0, 0, 0, 0.13);
-        width: inherit;
+        width: 100%;
         transition: background-color .5s;
 
         &:hover {
@@ -33,7 +37,6 @@
         }
     }
 }
-
 
 
 .button__blue {
@@ -63,4 +66,13 @@
     background-image: url('../images/fi_user.svg');
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.button__white {
+    background-color: #FFFFFF;
+    color: #000000;
+
+    &_color-blue {
+        color: #538DFF;
+    }
 }

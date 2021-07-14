@@ -1,11 +1,11 @@
 @import url(../fonts/formular.css);
 @import url(../vendor/normalize.css);
 
+@import '../blocks/button/button.scss';
 @import '../blocks/root/root.scss';
 @import '../blocks/page/page.scss';
 @import '../blocks/header/header.scss';
 @import '../blocks/logo/logo.scss';
-@import '../blocks/button/button.scss';
 @import '../blocks/heading/heading.scss';
 @import '../blocks/heading/heading.scss';
 @import '../blocks/footer/footer.scss';
@@ -15,3 +15,12 @@
 @import '../blocks/slider/slider.scss';
 @import '../blocks/vozmognosti/vozmognosti.scss';
 @import '../blocks/integration/integration.scss';
+@import '../blocks/tarif/tarif.scss';
+@import '../blocks/reviews/reviews.scss';
+@import '../blocks/freetest/freetest.scss';
+@import '../blocks/doyouknow/doyouknow.scss';
+@import '../blocks/question-answer/question-answer.scss';
+@import '../blocks/update/update.scss';
+@import '../blocks/clients/clients.scss';
+@import '../blocks/crm/crm.scss';
+@import '../blocks/interface/interface.scss';

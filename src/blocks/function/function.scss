@@ -4,7 +4,7 @@
     padding-top: 60px;
     padding-left: 75px;
     padding-right: 75px;
-    padding-bottom: 181px;
+    padding-bottom: 131px;
 
     &__title-block {
         display: flex;
@@ -17,12 +17,12 @@
     }
 
     &__slider-info {
-        margin-top: 60px;
+        margin-top: 72px;
         position: relative;
     }
 
     &__slider {
-        margin-top: 60px;
+        margin-top: 47px;
         &-title {
             @extend .font__razdel;
         }
