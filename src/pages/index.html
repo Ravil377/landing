@@ -20,16 +20,16 @@
                     </div>
                 
                 </li>
-                <li class="header__list-item">
+                <li class="header__list-item header__list-item_ml">
                     <ul class="header__navigation">
                         <li class="header__navigation-item"><a href="" class="header__navigation-item-link header__navigation-item-link_white">О проекте</a></li>
                         <li class="header__navigation-item"><a href="" class="header__navigation-item-link header__navigation-item-link_white">Возможности</a></li>
                         <li class="header__navigation-item"><a href="" class="header__navigation-item-link header__navigation-item-link_white">Тарифы</a></li>
                     </ul>
                 </li>
-                <li class="header__list-item">
+                <li class="header__list-item header__list-item_width">
                     <button type="button" class="button button__blue header__button button__white button__white_color-blue">Попробовать бесплатно</button>
-                    <button type="button" class="button-user button__white"></button>
+                    <div class="button-user button__white"></div>
                 </li>
             </ul>
         </header>
@@ -653,21 +653,24 @@
                         <li class="footer__navigation-list-item"><a href="#" class="footer__navigation-list-item-link">База знаний</a></li>
                         <li class="footer__navigation-list-item"><a href="#" class="footer__navigation-list-item-link">Обучающие видео</a></li>
                     </ul>
+                    <ul class="footer__navigation-list">
+                        <div class="footer__info">                    
+                            <ul class="footer__info-list">
+                                <li class="footer__contacts-item"><p class="footer__contacts-item-text footer__contacts-header-text">8 (800) 551-50-70</p></li>
+                                <li class="footer__contacts-item"><p class="footer__contacts-item-text">пн-пт 09:00 до 18:00</p></li>
+                                <li class="footer__contacts-item"><p class="footer__contacts-item-text">сб-вс 10:00 до 18:00</p></li>
+                            </ul>
+                            <ul class="footer__info-list footer__info-social-list">
+                                <li class="footer__social-item"><a href="#" class="footer__social-youtube"><img src="<%=require('../images/youtube_icon.png')%>" class="footer__social-icon" alt="Youtube"></a></li>
+                                <li class="footer__social-item"><a href="#" class="footer__social-youtube"><img src="<%=require('../images/vk_icon.png')%>" class="footer__social-icon" alt="Youtube"></a></li>
+                                <li class="footer__social-item"><a href="#" class="footer__social-youtube"><img src="<%=require('../images/Facebook_icon.png')%>" class="footer__social-icon" alt="Youtube"></a></li>
+                                <li class="footer__social-item"><a href="#" class="footer__social-youtube"><img src="<%=require('../images/Instagram_icon.png')%>" class="footer__social-icon" alt="Youtube"></a></li>                        </li>
+                            </ul>
+                        </div>
+                    </ul>
                 </nav>
-                <div class="footer__info">                    
-                    <ul class="footer__info-list">
-                        <li class="footer__contacts-item"><p class="footer__contacts-item-text footer__contacts-header-text">8 (800) 551-50-70</p></li>
-                        <li class="footer__contacts-item"><p class="footer__contacts-item-text">пн-пт 09:00 до 18:00</p></li>
-                        <li class="footer__contacts-item"><p class="footer__contacts-item-text">сб-вс 10:00 до 18:00</p></li>
-                    </ul>
-                    <ul class="footer__info-list footer__info-social-list">
-                        <li class="footer__social-item"><a href="#" class="footer__social-youtube"><img src="<%=require('../images/youtube_icon.png')%>" class="footer__social-icon" alt="Youtube"></a></li>
-                        <li class="footer__social-item"><a href="#" class="footer__social-youtube"><img src="<%=require('../images/vk_icon.png')%>" class="footer__social-icon" alt="Youtube"></a></li>
-                        <li class="footer__social-item"><a href="#" class="footer__social-youtube"><img src="<%=require('../images/Facebook_icon.png')%>" class="footer__social-icon" alt="Youtube"></a></li>
-                        <li class="footer__social-item"><a href="#" class="footer__social-youtube"><img src="<%=require('../images/Instagram_icon.png')%>" class="footer__social-icon" alt="Youtube"></a></li>                        </li>
-                    </ul>
-                </div>
-                <button type="button" class="button button__blue">Свяжитесь с нами</button>
+
+                <button type="button" class="button button__blue button_footer">Свяжитесь с нами</button>
             </div>
             <div class="footer__copyright">
                 <p class="footer__copyright-text">ИП Новиков В.Ф. Все права защищены</p>

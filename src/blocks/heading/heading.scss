@@ -20,7 +20,7 @@
         justify-content: center;
         align-items: center;
         max-width: 61px;
-        top: 284px;
+        top: 274px;
         left: 109px;
 
         &::before {
@@ -35,8 +35,8 @@
     }
 
     &__sklad {
-        top: 284px;
-        right: 109px;
+        top: 274px;
+        right: 108px;
         margin-top: 4px;
         flex-direction: column;
         align-items: center;
@@ -46,8 +46,8 @@
     }
 
     &__integration {
-        top: 956px;
-        left: 86px;
+        top: 820px;
+        left: 82px;
         color: #538DFF;
         flex-direction: column;
         align-items: center;
@@ -57,15 +57,15 @@
     }
 
     &__postavshiki {
-        top: 730px;
-        right: 73px;
+        top: 731px;
+        right: 87px;
         color: #538DFF;
         flex-direction: column;
         align-items: center;
 
         &-circle {
-            right: 111px;
-            top: 595px;
+            right: 116px;
+            top: 606px;
         }
 
         &::before {
@@ -74,8 +74,8 @@
     }
 
     &__magazin {
-        top: 481px;
-        left: 79px;
+        top: 478px;
+        left: 74px;
         margin-top: 4px;
         flex-direction: column;
         align-items: center;
@@ -84,7 +84,7 @@
         }
 
         &-circle {
-            left: 111px;
+            left: 103px;
             top: 364px;
         }
     }

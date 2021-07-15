@@ -5,7 +5,7 @@
 
 .footer__main {
     padding-top: 36px;
-    padding-bottom: 43px;
+    padding-bottom: 34px;
     padding-left: 75px;
     padding-right: 75px;
     display: flex;
@@ -13,12 +13,16 @@
 }
 
 .footer__logo {
-    margin-right: 50px;
+    width: 60px;
+    height: 60px;
 }
 
 .footer__navigation {
+    max-width: 850px;
+    margin-left: -60px;
+    width: 100%;
     display: flex;
-    margin-right: 30px;
+    justify-content: space-between;
 }
 
 .footer__navigation-list {
@@ -26,12 +30,14 @@
     padding: 0;
     margin: 0;
     max-width: 190px;
-    margin-right: 30px;
+    width: 100%;
+    
 }
 
 .footer__navigation-list-item {
-    margin-bottom: 13px;
+    margin-bottom: 9px;
 }
+
 .footer__navigation-list-item:first-child {
     margin-bottom: 20px;
 }
@@ -43,16 +49,17 @@
 .footer__navigation-list-item-link {
     color: #D2D7E4;
     text-decoration: none;
-    font-family: 'Formular';
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
+    line-height: 17px;
 }
 
 .footer__navigation-list-item-link_header {
     color: #FFFFFF;
     font-weight: 500;
     font-size: 20px;
+    line-height: 24px;
 }
 
 .footer__contacts-item {
@@ -115,12 +122,12 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    max-width: 190px;
+    width: 100%;
     margin-right: 110px;
 }
 
 .footer__social-item {
-    margin-right: 22px;
+    margin-right: 19px;
 }
 
 .footer__social-item:last-child {
@@ -128,6 +135,7 @@
 }
 
 .footer__info-social-list {
+    margin-top: 55px;
     display: flex;
     
 }

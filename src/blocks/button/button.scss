@@ -11,6 +11,11 @@
     border-radius: 59px;
     cursor: pointer;
 
+    &_footer {
+        max-width: 220px;
+        width: 100%;
+    }
+
     &_radius-14 {
         font-style: normal;
         font-weight: bold;

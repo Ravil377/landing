@@ -10,6 +10,9 @@
     }
 
     &__navigation {
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
         height: 61px;
         background: #FFFFFF;
         border: 1px solid #DEE1EA;
@@ -19,6 +22,7 @@
             list-style: none;
             display: flex;
             margin: 0;
+            padding: 0;
 
             &-item {
                 display: flex;
@@ -51,7 +55,7 @@
     &__card {
         padding: 0;
         margin: 0;
-        margin-top: 37px;
+        margin-top: 30px;
         list-style: none;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
