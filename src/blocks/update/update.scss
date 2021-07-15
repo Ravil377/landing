@@ -5,11 +5,16 @@
 
     &__list {
         padding: 0;
+        height: 300px;
         margin-top: 40px;
         list-style: none;
         display: flex;
+        align-items: stretch;
         
         &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
             max-width: 300px;
             width: 100%;
             padding: 30px;
@@ -49,7 +54,7 @@
 
             &-date {
                 margin: 0;
-                margin-top: 75px;
+                margin-top: auto;
                 font-weight: 500;
                 font-size: 16px;
                 line-height: 20px;

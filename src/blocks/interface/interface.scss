@@ -29,12 +29,13 @@
             }
 
             &-recording {
-                margin-top: 22px;
+                margin-top: -4px;
             }
             &-title {
                 padding: 0;
                 padding-left: 13px;
-                margin-top: 6px;
+                margin-top: 5px;
+                margin-bottom: 13px;
                 display: flex;
                 list-style: none;
 
@@ -60,7 +61,7 @@
                     }
                     
                     &-col2 {
-                        width: 90px;
+                        width: 82px;
                     }
                     &-col3 {
                         width: 106px;
