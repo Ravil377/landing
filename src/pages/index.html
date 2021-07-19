@@ -8,646 +8,380 @@
     <title>LiveSklad</title>
 </head>
 <body class="root">
+    <div class="popup">
+        <div class="popup__container">
+            <button type="button" class="popup__button-close"></button>
+            <h2 class="popup__container-title">Регистрация</h2>
+            <p class="popup__container-description">Попробуйте весь функционал LiveSklad. <br> Бесплатный доступ на 7 дней</p>
+            <form name="" class="" novalidate>
+                <input type="text" name="name" placeholder="Имя" id="name-input" class="popup__input" 
+                minlength="2" 
+                maxlength="30"
+                required/>
+                <input type="email" name="email" placeholder="E-mail" id="email-input" class="popup__input" required/>
+                <div class="popup__input popup__input_arrowdown">Ремонт телефона / компьютера</div>
+                <ul class="popup__input-list">
+                    <li class="popup__input popup__input_select">Ремонт телефона / компьютера</li>
+                    <li class="popup__input popup__input_select">Ремонт стиральной машины</li>
+                    <li class="popup__input popup__input_select">Ремонт телевизоров</li>
+                    <li class="popup__input popup__input_select">Настройка компьютера</li>
+                    <li class="popup__input popup__input_select">Установка драйверов</li>
+                </ul>
+
+                <button type="submit" class="popup__container-submit-button">Получить доступ</button>
+            </form>
+            <p class="popup__container-description-rules">Нажимаю кнопку “Получить доступ”, вы даете согласие на обработку персональных данных и соглошаетесь с Политикой конфидециальности.</p>
+        </div>
+    </div>
+    <div class="popup-burger">
+        <div class="popup-burger__container">
+            <button type="button" class="popup-burger__button-close"></button>
+                <ul class="popup-burger__container-menu">
+                    <li class="popup-burger__container-menu-item"><a href="" class="popup-burger__container-menu-item-link">О проекте</a></li>
+                    <li class="popup-burger__container-menu-item"><a href="#vozm" class="popup-burger__container-menu-item-link">Возможности</a></li>
+                    <li class="popup-burger__container-menu-item"><a href="#tarif" class="popup-burger__container-menu-item-link">Тарифы</a></li>
+                </ul>
+            <div class="header__contacts popup-burger__contacts">
+                <p class="header__contacts-tel popup-burger_black">8 (800) 551-50-70</p>
+                <p class="header__contacts-time popup-burger_black">09:00 до 18:00 по МСК</p>
+                <button type="button" class="popup-burger__button">Свяжитесь с нами</button>
+            </div>
+        </div>
+    </div>
     <section class="page">
+        <div class="header__background"></div>
         <header class="header">
-            <div class="header__background"></div>
             <ul class="header__list">
-                <li class="header__list-item">
-                    <img src="<%=require('../images/logo_white.png')%>" class="logo header__logo " alt="Лого">
+                <li class="header__list-item header__list-item-contacts">
+                    <img src="<%=require('../images/logo_white.png')%>" class="header__logo" alt="Лого">
                     <div class="header__contacts">
-                        <p class="header__contacts-text header__contacts-text_bold header__contacts-text_white">8 (800) 551-50-70</p>
-                        <p class="header__contacts-text header__contacts-text_white">09:00 до 18:00 по МСК</p>
+                        <p class="header__contacts-tel">8 (800) 551-50-70</p>
+                        <p class="header__contacts-time">09:00 до 18:00 по МСК</p>
                     </div>
-                
+
                 </li>
-                <li class="header__list-item header__list-item_ml">
-                    <ul class="header__navigation">
-                        <li class="header__navigation-item"><a href="" class="header__navigation-item-link header__navigation-item-link_white">О проекте</a></li>
-                        <li class="header__navigation-item"><a href="" class="header__navigation-item-link header__navigation-item-link_white">Возможности</a></li>
-                        <li class="header__navigation-item"><a href="" class="header__navigation-item-link header__navigation-item-link_white">Тарифы</a></li>
-                    </ul>
+                <li class="header__list-item header__list-item-menu">
+                    <a href="" class="header__list-item-menu-link">О проекте</a>
+                    <a href="#vozm" class="header__list-item-menu-link">Возможности</a>
+                    <a href="#tarif" class="header__list-item-menu-link">Тарифы</a>
                 </li>
-                <li class="header__list-item header__list-item_width">
-                    <button type="button" class="button button__blue header__button button__white button__white_color-blue">Попробовать бесплатно</button>
-                    <div class="button-user button__white"></div>
+                <li class="header__list-item header__list-item-buttons">
+                    <button type="button" class="button__free header__list-item-buttons-button">Попробовать бесплатно</button>
+                    <button type="button" class="header__list-item-buttons-buttonuser"></button>
+                    <div class="header__list-item-buttons-mobil"></div>
                 </li>
             </ul>
         </header>
         <main class="main">
             <section class="heading">
-                <div class="heading__element heading__vedenie-zakazov">Ведение заказов</div>
-                <div class="heading__element heading__sklad">Склад</div>
-                <div class="heading__element heading__magazin">Магазин</div>
-                <div class="heading__element heading__integration">Интеграция</div>
-                <div class="heading__element heading__postavshiki">Поставщики</div>
-                <img src="<%=require('../images/circle-magazin.svg')%>" class="heading__element heading__magazin-circle" alt="Круг">
-                <img src="<%=require('../images/circle-postavshik.svg')%>" class="heading__element heading__postavshiki-circle" alt="Круг">
-                <img src="<%=require('../images/road_sklad.svg')%>" class="heading__element heading__road-sklad" alt="Дорога">
 
+                <!--
                 
-                <h1 class="heading__title heading__title_white">CRM-система для автоматизации сервисных центров и мастерских</h1>
-                <p class="heading__description heading__description_white">Единая база заказов и клиентов, онлайн-касса, расчёт зарплаты, контроль рекламы, складской учёт, статистика, менеджер задач, продажи, SMS уведомления клиентам.</p>
-                <button type="button" class="button button__yellow heading__button">Попробовать бесплатно</button>
-
-                <div class="interface">
-                    <ul class="interface__list">
-                        <li class="interface__list-item interface__list-item-header">
-                            <div class="interface__list-item-button">Создать</div>
-                            <div class="interface__list-item-search interface__list-item-element" >Поиск...</div>
-                            <div class="interface__list-item-slider interface__list-item-element"></div>
-                            <div class="interface__list-item-work interface__list-item-element">В работе</div>
-                            <div class="interface__list-item-get interface__list-item-element">Выданные</div>
-                            <div class="interface__list-item-ok interface__list-item-element"></div>
-                            <div class="interface__list-item-new interface__list-item-element"></div>
-                            <div class="interface__list-item-clear"></div>
-                            <div class="interface__list-item-filter"></div>
-                            <div class="interface__list-item-setting interface__list-item-element"></div>
-                        </li>
-                        <li class="interface__list-item">
-                            <ul class="interface__list-item-title">
-                                <li class="interface__list-item-title-text-col1 interface__list-item-title-text">ЗАКАЗ</li>
-                                <li class="interface__list-item-title-text-col2 interface__list-item-title-text">СТАТУС</li>
-                                <li class="interface__list-item-title-text-col3 interface__list-item-title-text">МЕНЕДЖЕР</li>
-                                <li class="interface__list-item-title-text-col4 interface__list-item-title-text">ТИП ЗАКАЗА</li>
-                                <li class="interface__list-item-title-text-col5 interface__list-item-title-text">ТИП УСТРОЙСТВА</li>
-                                <li class="interface__list-item-title-text-col6 interface__list-item-title-text">УСТРОЙСТВО</li>
-                                <li class="interface__list-item-title-text-col7 interface__list-item-title-text">НЕИСПРАВНОСТЬ</li>
-                                <li class="interface__list-item-title-text-col8 interface__list-item-title-text">ФОТО</li>
-                                <li class="interface__list-item-title-text-col9 interface__list-item-title-text">КОНТРАГЕНТ</li>
-                                <li class="interface__list-item-title-text-col10 interface__list-item-title-text">КРАЙНИЙ СРОК</li>
-                            </ul>
-                        </li>
-                        <li class="interface__list-item interface__list-item-recording">
-                            <ul class="interface__list-item-title">
-                                <li class="interface__list-item-title-text-col1 interface__list-item-title-text-recording">А000275</li>
-                                <li class="interface__list-item-title-text-col2 interface__list-item-title-text-recording"><div class="interface__button interface__button_blue">новый</div></li>
-                                <li class="interface__list-item-title-text-col3 interface__list-item-title-text-recording">Кудряшев Данил<span class="interface__list-item-title-text-desc">09.06.2021 - 14:50</span></span></li>
-                                <li class="interface__list-item-title-text-col4 interface__list-item-title-text-recording">Платный</li>
-                                <li class="interface__list-item-title-text-col5 interface__list-item-title-text-recording">Телевизор<span class="interface__list-item-title-text-desc">Черный</span></li>
-                                <li class="interface__list-item-title-text-col6 interface__list-item-title-text-recording">Samsung UE32N5000AU<span class="interface__list-item-title-text-desc">OAYZ3LHGB0344</span></li>
-                                <li class="interface__list-item-title-text-col7 interface__list-item-title-text-recording">Samsung UE32N5000AU<span class="interface__list-item-title-text-desc">Замена</span></li>
-                                <li class="interface__list-item-title-text-col8 interface__list-item-title-text-recording"></li>
-                                <li class="interface__list-item-title-text-col9 interface__list-item-title-text-recording interface__list-item-title-text-recording_blue">Бабкин Александр Сергеевич<span class="interface__list-item-title-text-desc interface__list-item-title-text-desc_black">+7 900 900 90 90</span></li>
-                                <li class="interface__list-item-title-text-col10 interface__list-item-title-text-recording"></li>
-                            </ul>
-                        </li>
-                        <li class="interface__list-item interface__list-item-recording">
-                            <ul class="interface__list-item-title">
-                                <li class="interface__list-item-title-text-col1 interface__list-item-title-text-recording">А000274</li>
-                                <li class="interface__list-item-title-text-col2 interface__list-item-title-text-recording"><div class="interface__button interface__button_blue">новый</div></li>
-                                <li class="interface__list-item-title-text-col3 interface__list-item-title-text-recording">Петров Роман<span class="interface__list-item-title-text-desc">09.06.2021 - 14:27</span></span></li>
-                                <li class="interface__list-item-title-text-col4 interface__list-item-title-text-recording">Платный</li>
-                                <li class="interface__list-item-title-text-col5 interface__list-item-title-text-recording">Ноутбук<span class="interface__list-item-title-text-desc">Серый космос</span></li>
-                                <li class="interface__list-item-title-text-col6 interface__list-item-title-text-recording">Apple MacBook Pro<span class="interface__list-item-title-text-desc">OAYZ3LHGB0344</span></li>
-                                <li class="interface__list-item-title-text-col7 interface__list-item-title-text-recording">Не работает клавиша Б<span class="interface__list-item-title-text-desc">Замена</span></li>
-                                <li class="interface__list-item-title-text-col8 interface__list-item-title-text-recording"><img src="<%=require('../images/clock.jpg')%>" alt="Ноутбук" class="interface__list-item-title-text-recording-image"></li>
-                                <li class="interface__list-item-title-text-col9 interface__list-item-title-text-recording interface__list-item-title-text-recording_blue">Сидоров Антон Сергеевич<span class="interface__list-item-title-text-desc interface__list-item-title-text-desc_black">+7 900 900 90 90</span></li>
-                                <li class="interface__list-item-title-text-col10 interface__list-item-title-text-recording"></li>
-                            </ul>
-                        </li>
-                        <li class="interface__list-item interface__list-item-recording">
-                            <ul class="interface__list-item-title">
-                                <li class="interface__list-item-title-text-col1 interface__list-item-title-text-recording">А000274</li>
-                                <li class="interface__list-item-title-text-col2 interface__list-item-title-text-recording"><div class="interface__button interface__button_light-blue">Диагностика</div><span class="interface__button_day-green">1 день</span></li>
-                                <li class="interface__list-item-title-text-col3 interface__list-item-title-text-recording">Петров Роман<span class="interface__list-item-title-text-desc">09.06.2021 - 14:50</span></span></li>
-                                <li class="interface__list-item-title-text-col4 interface__list-item-title-text-recording">Гарантированный</li>
-                                <li class="interface__list-item-title-text-col5 interface__list-item-title-text-recording">Мультиварка<span class="interface__list-item-title-text-desc">Серебристый</span></li>
-                                <li class="interface__list-item-title-text-col6 interface__list-item-title-text-recording">Polaris PMC 0517AD<span class="interface__list-item-title-text-desc"></span></li>
-                                <li class="interface__list-item-title-text-col7 interface__list-item-title-text-recording">Не работает подогрев<span class="interface__list-item-title-text-desc">Диагностика</span></li>
-                                <li class="interface__list-item-title-text-col8 interface__list-item-title-text-recording"></li>
-                                <li class="interface__list-item-title-text-col9 interface__list-item-title-text-recording interface__list-item-title-text-recording_blue">Малыгин Игорь Владимирович<span class="interface__list-item-title-text-desc interface__list-item-title-text-desc_black">+7 900 900 90 90</span></li>
-                                <li class="interface__list-item-title-text-col10 interface__list-item-title-text-recording"></li>
-                            </ul>
-                        </li>
-                        <li class="interface__list-item interface__list-item-recording">
-                            <ul class="interface__list-item-title">
-                                <li class="interface__list-item-title-text-col1 interface__list-item-title-text-recording">А000273</li>
-                                <li class="interface__list-item-title-text-col2 interface__list-item-title-text-recording"><div class="interface__button interface__button_orange">На согласовании</div></li>
-                                <li class="interface__list-item-title-text-col3 interface__list-item-title-text-recording">Петров Роман<span class="interface__list-item-title-text-desc">09.06.2021 - 14:50</span></span></li>
-                                <li class="interface__list-item-title-text-col4 interface__list-item-title-text-recording">Платный</li>
-                                <li class="interface__list-item-title-text-col5 interface__list-item-title-text-recording">Перфоратор<span class="interface__list-item-title-text-desc">Черный</span></li>
-                                <li class="interface__list-item-title-text-col6 interface__list-item-title-text-recording">BOSCH GBH 240, 790 Bт<span class="interface__list-item-title-text-desc"></span></li>
-                                <li class="interface__list-item-title-text-col7 interface__list-item-title-text-recording">Износ щеток<span class="interface__list-item-title-text-desc">Замена</span></li>
-                                <li class="interface__list-item-title-text-col8 interface__list-item-title-text-recording"></li>
-                                <li class="interface__list-item-title-text-col9 interface__list-item-title-text-recording interface__list-item-title-text-recording_blue">Старавойтов Юрий Николаевич<span class="interface__list-item-title-text-desc interface__list-item-title-text-desc_black">+7 900 900 90 90</span></li>
-                                <li class="interface__list-item-title-text-col10 interface__list-item-title-text-recording"></li>
-                            </ul>
-                        </li>
-                        <li class="interface__list-item interface__list-item-recording">
-                            <ul class="interface__list-item-title">
-                                <li class="interface__list-item-title-text-col1 interface__list-item-title-text-recording">А000272</li>
-                                <li class="interface__list-item-title-text-col2 interface__list-item-title-text-recording"><div class="interface__button interface__button_light-blue">Диагностика</div><span class="interface__button_day-green">21 день</span></li>
-                                <li class="interface__list-item-title-text-col3 interface__list-item-title-text-recording">Кудряшев Данил<span class="interface__list-item-title-text-desc">09.06.2021 - 14:50</span></span></li>
-                                <li class="interface__list-item-title-text-col4 interface__list-item-title-text-recording">Платный</li>
-                                <li class="interface__list-item-title-text-col5 interface__list-item-title-text-recording">Электродрель<span class="interface__list-item-title-text-desc">Черный</span></li>
-                                <li class="interface__list-item-title-text-col6 interface__list-item-title-text-recording">Makita 6413 450 Вт<span class="interface__list-item-title-text-desc"></span></li>
-                                <li class="interface__list-item-title-text-col7 interface__list-item-title-text-recording">Не включается<span class="interface__list-item-title-text-desc">Диагностика</span></li>
-                                <li class="interface__list-item-title-text-col8 interface__list-item-title-text-recording"></li>
-                                <li class="interface__list-item-title-text-col9 interface__list-item-title-text-recording interface__list-item-title-text-recording_blue">Васильев Александр Сергеевич<span class="interface__list-item-title-text-desc interface__list-item-title-text-desc_black">+7 900 900 90 90</span></li>
-                                <li class="interface__list-item-title-text-col10 interface__list-item-title-text-recording"></li>
-                            </ul>
-                        </li>
-                        <li class="interface__list-item interface__list-item-recording">
-                            <ul class="interface__list-item-title">
-                                <li class="interface__list-item-title-text-col1 interface__list-item-title-text-recording">А000271</li>
-                                <li class="interface__list-item-title-text-col2 interface__list-item-title-text-recording"><div class="interface__button interface__button_grey">Без ремонта</div></li>
-                                <li class="interface__list-item-title-text-col3 interface__list-item-title-text-recording">Петров Роман<span class="interface__list-item-title-text-desc">09.06.2021 - 14:50</span></span></li>
-                                <li class="interface__list-item-title-text-col4 interface__list-item-title-text-recording">Платный</li>
-                                <li class="interface__list-item-title-text-col5 interface__list-item-title-text-recording">Фотоаппарат<span class="interface__list-item-title-text-desc">Черный</span></li>
-                                <li class="interface__list-item-title-text-col6 interface__list-item-title-text-recording">Canon EOS 600D<span class="interface__list-item-title-text-desc"></span></li>
-                                <li class="interface__list-item-title-text-col7 interface__list-item-title-text-recording">Не работает затвор<span class="interface__list-item-title-text-desc">Диагностика</span></li>
-                                <li class="interface__list-item-title-text-col8 interface__list-item-title-text-recording"></li>
-                                <li class="interface__list-item-title-text-col9 interface__list-item-title-text-recording interface__list-item-title-text-recording_blue">Гришкин Андрей<span class="interface__list-item-title-text-desc interface__list-item-title-text-desc_black">+7 900 900 90 90</span></li>
-                                <li class="interface__list-item-title-text-col10 interface__list-item-title-text-recording"></li>
-                            </ul>
-                        </li>
-                        <li class="interface__list-item interface__list-item-recording">
-                            <ul class="interface__list-item-title">
-                                <li class="interface__list-item-title-text-col1 interface__list-item-title-text-recording">А000270</li>
-                                <li class="interface__list-item-title-text-col2 interface__list-item-title-text-recording"><div class="interface__button interface__button_blue">новый</div></li>
-                                <li class="interface__list-item-title-text-col3 interface__list-item-title-text-recording">Петров Роман<span class="interface__list-item-title-text-desc">09.06.2021 - 14:50</span></span></li>
-                                <li class="interface__list-item-title-text-col4 interface__list-item-title-text-recording">Платный</li>
-                                <li class="interface__list-item-title-text-col5 interface__list-item-title-text-recording">Игровая приставка<span class="interface__list-item-title-text-desc">Черный</span></li>
-                                <li class="interface__list-item-title-text-col6 interface__list-item-title-text-recording">Sony PlayStation 4<span class="interface__list-item-title-text-desc"></span></li>
-                                <li class="interface__list-item-title-text-col7 interface__list-item-title-text-recording">Греется<span class="interface__list-item-title-text-desc">Чистка</span></li>
-                                <li class="interface__list-item-title-text-col8 interface__list-item-title-text-recording"><img src="<%=require('../images/sony.jpg')%>" alt="Игровая приставка" class="interface__list-item-title-text-recording-image"></li>
-                                <li class="interface__list-item-title-text-col9 interface__list-item-title-text-recording interface__list-item-title-text-recording_blue">Борак Александр Николаевич<span class="interface__list-item-title-text-desc interface__list-item-title-text-desc_black">+7 900 900 90 90</span></li>
-                                <li class="interface__list-item-title-text-col10 interface__list-item-title-text-recording"></li>
-                            </ul>
-                        </li>
-                        <li class="interface__list-item interface__list-item-recording">
-                            <ul class="interface__list-item-title">
-                                <li class="interface__list-item-title-text-col1 interface__list-item-title-text-recording">А000275</li>
-                                <li class="interface__list-item-title-text-col2 interface__list-item-title-text-recording"><div class="interface__button interface__button_grey">Выдан</div></li>
-                                <li class="interface__list-item-title-text-col3 interface__list-item-title-text-recording">Кудряшев Данил<span class="interface__list-item-title-text-desc">09.06.2021 - 14:50</span></span></li>
-                                <li class="interface__list-item-title-text-col4 interface__list-item-title-text-recording">Платный</li>
-                                <li class="interface__list-item-title-text-col5 interface__list-item-title-text-recording">Часы<span class="interface__list-item-title-text-desc">Черный</span></li>
-                                <li class="interface__list-item-title-text-col6 interface__list-item-title-text-recording">Apple Watch 2 40мм<span class="interface__list-item-title-text-desc"></span></li>
-                                <li class="interface__list-item-title-text-col7 interface__list-item-title-text-recording">Быстро разряжается<span class="interface__list-item-title-text-desc">Замена АКБ</span></li>
-                                <li class="interface__list-item-title-text-col8 interface__list-item-title-text-recording"></li>
-                                <li class="interface__list-item-title-text-col9 interface__list-item-title-text-recording interface__list-item-title-text-recording_blue">Малов Дмитрий Федорович<span class="interface__list-item-title-text-desc interface__list-item-title-text-desc_black">+7 900 900 90 90</span></li>
-                                <li class="interface__list-item-title-text-col10 interface__list-item-title-text-recording"></li>
-                            </ul>
-                        </li>
-                        <li class="interface__list-item interface__list-item-recording">
-                            <ul class="interface__list-item-title">
-                                <li class="interface__list-item-title-text-col1 interface__list-item-title-text-recording">А000275</li>
-                                <li class="interface__list-item-title-text-col2 interface__list-item-title-text-recording"><div class="interface__button interface__button_blue">новый</div></li>
-                                <li class="interface__list-item-title-text-col3 interface__list-item-title-text-recording">Кудряшев Данил<span class="interface__list-item-title-text-desc">09.06.2021 - 14:50</span></span></li>
-                                <li class="interface__list-item-title-text-col4 interface__list-item-title-text-recording">Платный</li>
-                                <li class="interface__list-item-title-text-col5 interface__list-item-title-text-recording">Ноутбук<span class="interface__list-item-title-text-desc">Белый</span></li>
-                                <li class="interface__list-item-title-text-col6 interface__list-item-title-text-recording">Sony PCG-61715V<span class="interface__list-item-title-text-desc"></span></li>
-                                <li class="interface__list-item-title-text-col7 interface__list-item-title-text-recording">Шумит куллер<span class="interface__list-item-title-text-desc">Чистка (разборка/сборка)</span></li>
-                                <li class="interface__list-item-title-text-col8 interface__list-item-title-text-recording"></li>
-                                <li class="interface__list-item-title-text-col9 interface__list-item-title-text-recording interface__list-item-title-text-recording_blue">Дроздова Кристина Николаевна<span class="interface__list-item-title-text-desc interface__list-item-title-text-desc_black">+7 900 900 90 90</span></li>
-                                <li class="interface__list-item-title-text-col10 interface__list-item-title-text-recording"></li>
-                            </ul>
-                        </li>
-                        <li class="interface__list-item interface__list-item-recording">
-                            <ul class="interface__list-item-title">
-                                <li class="interface__list-item-title-text-col1 interface__list-item-title-text-recording">А000273</li>
-                                <li class="interface__list-item-title-text-col2 interface__list-item-title-text-recording"><div class="interface__button interface__button_orange">На согласовании</div></li>
-                                <li class="interface__list-item-title-text-col3 interface__list-item-title-text-recording">Петров Роман<span class="interface__list-item-title-text-desc">09.06.2021 - 14:50</span></span></li>
-                                <li class="interface__list-item-title-text-col4 interface__list-item-title-text-recording">Платный</li>
-                                <li class="interface__list-item-title-text-col5 interface__list-item-title-text-recording">Перфоратор<span class="interface__list-item-title-text-desc">Черный</span></li>
-                                <li class="interface__list-item-title-text-col6 interface__list-item-title-text-recording">BOSCH GBH 240, 790 Bт<span class="interface__list-item-title-text-desc"></span></li>
-                                <li class="interface__list-item-title-text-col7 interface__list-item-title-text-recording">Износ щеток<span class="interface__list-item-title-text-desc">Замена</span></li>
-                                <li class="interface__list-item-title-text-col8 interface__list-item-title-text-recording"></li>
-                                <li class="interface__list-item-title-text-col9 interface__list-item-title-text-recording interface__list-item-title-text-recording_blue">Старавойтов Юрий Николаевич<span class="interface__list-item-title-text-desc interface__list-item-title-text-desc_black">+7 900 900 90 90</span></li>
-                                <li class="interface__list-item-title-text-col10 interface__list-item-title-text-recording"></li>
-                            </ul>
-                        </li>
-                    </ul>
+                
+                
+                
+                 -->
+                <h1 class="heading__title">CRM-система для автоматизации сервисных центров и мастерских</h1>
+                <p class="heading__description">Единая база заказов и клиентов, онлайн-касса, расчёт зарплаты, контроль рекламы, складской учёт, статистика, менеджер задач, продажи, SMS уведомления клиентам.</p>
+                <button type="button" class="button__free heading__button heading__button_yellow">Попробовать бесплатно</button>
+                <div class="heading__interface-container">
+                    <img src="<%=require('../images/interface.jpg')%>" class="heading__interface" alt="Интерфейс">
+                    <div class="heading__element heading__vedenie-zakazov">Ведение заказов</div>
+                    <div class="heading__element heading__sklad">Склад</div>
+                    <div class="heading__element heading__magazin">Магазин</div>
+                    <div class="heading__element heading__integration">Интеграция</div>
+                    <div class="heading__element heading__postavshiki">Поставщики</div>
+                    <img src="<%=require('../images/circle-magazin.svg')%>" class="heading__element heading__magazin-circle" alt="Круг">
+                    <img src="<%=require('../images/circle-postavshik.svg')%>" class="heading__element heading__postavshiki-circle" alt="Круг">
+                    <img src="<%=require('../images/road_sklad.svg')%>" class="heading__element heading__road-sklad" alt="Дорога">
                 </div>
             </section>
             <section class="automation">
                 <h2 class="automation__title">Умная автоматизация сервисных центров и мастерских</h2>
                 <p class="automation__description">LiveSklad - подойдет для каждого!</p>
 
-                <div class="automation__slider">
-                    <div class="automation__slider-navigation">
-                        <div class="automation__slider-arrow automation__slider-arrow_rotate">
-                            <img src="<%=require('../images/arrow.png')%>" alt="Влево" class="automation__slider-arrow-image automation__slider-arrow_rotate">
+                <div class="automation__block-sliders">
+                        <div class="automation__slider-navigation-arrow automation__slider-navigation-arrow-left">
+                            <img src="<%=require('../images/arrow.png')%>" alt="Влево" class="automation__slider-navigation__slider-arrow-image automation__slider-arrow_rotate">
+                        </div>                        
+                        <div class="automation__slider-navigation-arrow automation__slider-navigation-arrow-right automation__slider-navigation-arrow_rotate">
+                            <img src="<%=require('../images/arrow.png')%>" alt="Вправо" class="automation__slider-navigation__slider-arrow-image automation__slider-arrow_rotate">
                         </div>
-                        <div class="automation__slider-item-overlay-active">
-                            <p class="automation__slider-item-title">Ремонт электроники</p>
-                            <button type="button" class="button button__yellow automation__slider-button">Попробовать бесплатно</button>
+                        <div class="automation__slider-list">
+                            <div class="automation__slider-slide">
+                                <img src="<%=require('../images/slide3.png')%>" class="" alt="Слайд">
+                                <div class="automation__slider-slide-description">
+                                    <p class="automation__slider-slide-description-title">Ремонт электроники</p>
+                                    <button type="button" class="automation__slider-slide-button">Попробовать бесплатно</button>
+                                </div>
+                            </div>
+                            <div class="automation__slider-slide automation__slider-slide_active">
+                                <img src="<%=require('../images/slide3.png')%>" class="" alt="Слайд">
+                                <div class="automation__slider-slide-description automation__slider-slide-description_active">
+                                    <p class="automation__slider-slide-description-title">Ремонт электроники</p>
+                                    <button type="button" class="automation__slider-slide-button">Попробовать бесплатно</button>
+                                </div>
+                            </div>
+                            <div class="automation__slider-slide">
+                                <img src="<%=require('../images/slide3.png')%>" class="" alt="Слайд">
+                                <div class="automation__slider-slide-description">
+                                    <p class="automation__slider-slide-description-title">Ремонт электроники</p>
+                                    <button type="button" class="automation__slider-slide-button">Попробовать бесплатно</button>
+                                </div>
+                            </div>
+                            <div class="automation__slider-slide">
+                                <img src="<%=require('../images/slide3.png')%>" class="" alt="Слайд">
+                                <div class="automation__slider-slide-description">
+                                    <p class="automation__slider-slide-description-title">Ремонт электроники</p>
+                                    <button type="button" class="automation__slider-slide-button">Попробовать бесплатно</button>
+                                </div>
+                            </div>
+                            <div class="automation__slider-slide">
+                                <img src="<%=require('../images/slide3.png')%>" class="" alt="Слайд">
+                                <div class="automation__slider-slide-description">
+                                    <p class="automation__slider-slide-description-title">Ремонт электроники</p>
+                                    <button type="button" class="automation__slider-slide-button">Попробовать бесплатно</button>
+                                </div>
+                            </div>
+                            <div class="automation__slider-slide">
+                                <img src="<%=require('../images/slide3.png')%>" class="" alt="Слайд">
+                                <div class="automation__slider-slide-description">
+                                    <p class="automation__slider-slide-description-title">Ремонт электроники</p>
+                                    <button type="button" class="automation__slider-slide-button">Попробовать бесплатно</button>
+                                </div>
+                            </div>
                         </div>
-                        
-                        <div class="automation__slider-arrow">
-                            <img src="<%=require('../images/arrow.png')%>" alt="Вправо" class="automation__slider-arrow-image automation__slider-arrow_rotate">
-                        </div>
-                    </div>
-
-                    
-                    <img src="<%=require('../images/slide1.jpg')%>" class="automation__slider-item" alt="Слайд">
-                    <img src="<%=require('../images/slide2.jpg')%>" class="automation__slider-item" alt="Слайд">
-                    <img src="<%=require('../images/slide3.png')%>" class="automation__slider-item automation__slider-item_active" alt="Слайд">
-                    <img src="<%=require('../images/slide4.jpg')%>" class="automation__slider-item" alt="Слайд">
-                    <img src="<%=require('../images/slide5.jpg')%>" class="automation__slider-item" alt="Слайд">
-                    <img src="<%=require('../images/slide6.jpg')%>" class="automation__slider-item" alt="Слайд">
-                    <img src="<%=require('../images/slide7.jpg')%>" class="automation__slider-item" alt="Слайд">
-
-                </div>
-            </section>
-            <section class="function function_none">
-                <div class="function__title-block">
-                    <h2 class="function__title">Основные функции</h2>
-                    <nav class="navigation-arrow">
-                        <button type="button" class="navigation-arrow__button"></button>
-                        <button type="button" class="navigation-arrow__button navigation-arrow__button_rotate navigation-arrow__button_blue"></button>
-                    </nav>
-                </div>
-                <div class="function__slider">
-                    <ul class="slider">
-                        <li class="slider__item"><img src="<%=require('../images/uchet_zakazov.svg')%>" class="slider__item-image" alt="Учет заказов"><p class="slider__item-description">Учет заказов</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/raschet_zarplati.svg')%>" class="slider__item-image slider__item_active" alt="Расчет заказов"><p class="slider__item-description">Расчет зарплаты</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/online_kacca.svg')%>" class="slider__item-image" alt="Онлайн касса"><p class="slider__item-description">Онлайн касса</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/kontrol_reklami.svg')%>" class="slider__item-image" alt="Контроль рекламы"><p class="slider__item-description">Контроль рекламы</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/rabota.svg')%>" class="slider__item-image" alt="Работа с поставщиками"><p class="slider__item-description">Работа с поставщиками</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/vvedenie_prodag.svg')%>" class="slider__item-image" alt="Ведение продаж"><p class="slider__item-description">Ведение продаж</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/buhgalteria.svg')%>" class="slider__item-image" alt="Бухгалтерия и финансы"><p class="slider__item-description">Бухгалтерия и финансы</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/statistika.svg')%>" class="slider__item-image" alt="статистика"><p class="slider__item-description">Статистика</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/skladskoy_uchet.svg')%>" class="slider__item-image" alt="Складской учет"><p class="slider__item-description">Складской учет</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/rassilka.svg')%>" class="slider__item-image" alt="Рассылка уведомлений"><p class="slider__item-description">Рассылка уведомлений</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/print.svg')%>" class="slider__item-image" alt="Печать документов"><p class="slider__item-description">Печать документов</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/manager.svg')%>" class="slider__item-image" alt="Менеджер задач"><p class="slider__item-description">Менеджер задач</p></li>
-                    </ul>
-                    <div class="function__slider-info">
-                        <h3 class="function__slider-title">Расчет зарплаты</h3>
-                        <p class="function__slider-description">Cчитает зарплату для каждого сотрудника по индивидуальным правилам. Фиксирует все выплаты и отражает начисления в зарплатной ведомости.</p>
-                        <a href="#" class="function__slider-link">Попробовать бесплатно &rarr;</a>
-                        <img src="<%=require('../images/raschet_zarplati_big.svg')%>" class="function__slider-image" alt="Расчет заказов">
-                    </div>
                 </div>
             </section>
             <section class="function">
                 <div class="function__title-block">
                     <h2 class="function__title">Основные функции</h2>
                     <nav class="navigation-arrow">
-                        <button type="button" class="navigation-arrow__button"></button>
-                        <button type="button" class="navigation-arrow__button navigation-arrow__button_rotate navigation-arrow__button_blue"></button>
+                        <button type="button" class="navigation-arrow__button navigation-arrow__button-left"></button>
+                        <button type="button" class="navigation-arrow__button navigation-arrow__button-right navigation-arrow__button_rotate navigation-arrow__button_blue"></button>
                     </nav>
                 </div>
+                
                 <div class="function__slider">
-                    <ul class="slider">
-                        <li class="slider__item"><img src="<%=require('../images/uchet_zakazov.svg')%>" class="slider__item-image slider__item_active" alt="Учет заказов"><p class="slider__item-description">Учет заказов</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/raschet_zarplati.svg')%>" class="slider__item-image" alt="Расчет заказов"><p class="slider__item-description">Расчет зарплаты</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/online_kacca.svg')%>" class="slider__item-image" alt="Онлайн касса"><p class="slider__item-description">Онлайн касса</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/kontrol_reklami.svg')%>" class="slider__item-image" alt="Контроль рекламы"><p class="slider__item-description">Контроль рекламы</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/rabota.svg')%>" class="slider__item-image" alt="Работа с поставщиками"><p class="slider__item-description">Работа с поставщиками</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/vvedenie_prodag.svg')%>" class="slider__item-image" alt="Ведение продаж"><p class="slider__item-description">Ведение продаж</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/buhgalteria.svg')%>" class="slider__item-image" alt="Бухгалтерия и финансы"><p class="slider__item-description">Бухгалтерия и финансы</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/statistika.svg')%>" class="slider__item-image" alt="статистика"><p class="slider__item-description">Статистика</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/skladskoy_uchet.svg')%>" class="slider__item-image" alt="Складской учет"><p class="slider__item-description">Складской учет</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/rassilka.svg')%>" class="slider__item-image" alt="Рассылка уведомлений"><p class="slider__item-description">Рассылка уведомлений</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/print.svg')%>" class="slider__item-image" alt="Печать документов"><p class="slider__item-description">Печать документов</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/manager.svg')%>" class="slider__item-image" alt="Менеджер задач"><p class="slider__item-description">Менеджер задач</p></li>
-                    </ul>
+                    <div class="function__slider-wrapper">
+                            <div id="function_tab1" data-value="function_tab1" class="function_tab1 function__slider-wrapper-item slider__item">
+                                <div class="function__slider-wrapper-item-image">
+                                    <img src="<%=require('../images/uchet_zakazov.svg')%>" class="" alt="Учет заказов">
+                                </div>
+                                <p class="function__slider-wrapper-item-description">Учет заказов</p>
+                            </div>
+                            <div id="function_tab2" data-value="function_tab2" class="function_tab2 function__slider-wrapper-item slider__item">
+                                <div class="function__slider-wrapper-item-image slider__item_active">
+                                    <img src="<%=require('../images/raschet_zarplati.svg')%>" class="function__slider-wrapper-item-image-src" alt="Расчет заказов">
+                                </div>
+                                
+                                <p class="function__slider-wrapper-item-description">Расчет зарплаты</p>
+                            </div>
+                            <div id="function_tab3" data-value="function_tab3" class="function_tab3 function__slider-wrapper-item slider__item">
+                                <div class="function__slider-wrapper-item-image">
+                                    <img src="<%=require('../images/online_kacca.svg')%>" class="function__slider-wrapper-item-image-src" alt="Онлайн касса">
+                                </div>
+                                
+                                <p class="function__slider-wrapper-item-description">Онлайн касса</p>
+                            </div>
+                            <div id="function_tab4" data-value="function_tab4" class="function_tab4 function__slider-wrapper-item slider__item">
+                                <div class="function__slider-wrapper-item-image">
+                                    <img src="<%=require('../images/kontrol_reklami.svg')%>" class="function__slider-wrapper-item-image-src" alt="Контроль рекламы">
+                                </div>
+                                
+                                <p class="function__slider-wrapper-item-description">Контроль рекламы</p>
+                            </div>
+                            <div id="function_tab5" data-value="function_tab5" class="function_tab5 function__slider-wrapper-item slider__item">
+                                <div class="function__slider-wrapper-item-image">
+                                    <img src="<%=require('../images/rabota.svg')%>" class="function__slider-wrapper-item-image-src" alt="Работа с поставщиками">
+                                </div>
+                                
+                                <p class="function__slider-wrapper-item-description">Работа с поставщиками</p>
+                            </div>
+                            <div id="function_tab6" data-value="function_tab6" class="function_tab6 function__slider-wrapper-item slider__item">
+                                <div class="function__slider-wrapper-item-image">
+                                    <img src="<%=require('../images/vvedenie_prodag.svg')%>" class="function__slider-wrapper-item-image-src" alt="Ведение продаж">
+                                </div>
+                                
+                                <p class="function__slider-wrapper-item-description">Ведение продаж</p>
+                            </div>
+                            <div id="function_tab7" data-value="function_tab7" class="function_tab7 function__slider-wrapper-item slider__item">
+                                <div class="function__slider-wrapper-item-image">
+                                    <img src="<%=require('../images/buhgalteria.svg')%>" class="function__slider-wrapper-item-image-src" alt="Бухгалтерия и финансы">
+                                </div>
+                                
+                                <p class="function__slider-wrapper-item-description">Бухгалтерия и финансы</p>
+                            </div>
+                            <div id="function_tab8" data-value="function_tab8" class="function_tab8 function__slider-wrapper-item slider__item">
+                                <div class="function__slider-wrapper-item-image">
+                                    <img src="<%=require('../images/statistika.svg')%>" class="function__slider-wrapper-item-image-src" alt="статистика">
+                                </div>
+                                
+                                <p class="function__slider-wrapper-item-description">Статистика</p>
+                            </div>
+                            <div id="function_tab9" data-value="function_tab9" class="function_tab9 function__slider-wrapper-item slider__item">
+                                <div class="function__slider-wrapper-item-image">
+                                    <img src="<%=require('../images/skladskoy_uchet.svg')%>" class="function__slider-wrapper-item-image-src" alt="Складской учет">
+                                </div>
+                                
+                                <p class="function__slider-wrapper-item-description">Складской учет</p>
+                            </div>
+                            <div id="function_tab10" data-value="function_tab10" class="function_tab10 function__slider-wrapper-item slider__item">
+                                <div class="function__slider-wrapper-item-image">
+                                    <img src="<%=require('../images/rassilka.svg')%>" class="function__slider-wrapper-item-image-src" alt="Рассылка уведомлений">
+                                </div>
+                                
+                                <p class="function__slider-wrapper-item-description">Рассылка уведомлений</p>
+                            </div>
+                            <div id="function_tab11" data-value="function_tab11" class="function_tab11 function__slider-wrapper-item slider__item">
+                                <div class="function__slider-wrapper-item-image">
+                                    <img src="<%=require('../images/print.svg')%>" class="function__slider-wrapper-item-image-src" alt="Печать документов">
+                                </div>
+                                <p class="function__slider-wrapper-item-description">Печать документов</p>
+                            </div>
+                            <div id="function_tab12" data-value="function_tab12" class="function_tab12 function__slider-wrapper-item slider__item">
+                                <div class="function__slider-wrapper-item-image">
+                                    <img src="<%=require('../images/manager.svg')%>" class="function__slider-wrapper-item-image-src" alt="Менеджер задач">
+                                </div>
+                                <p class="function__slider-wrapper-item-description">Менеджер задач</p>
+                            </div>
+                    </div>
                     <div class="function__slider-info">
-                        <h3 class="function__slider-title">Учет заказов</h3>
-                        <p class="function__slider-description">Ускоряет оформление, позволяет не потерять ни один заказ и контролировать сроки исполнения, гибко взаимодействовать с клиентами, сохраняет историю работы с заказом.</p>
-                        <a href="#" class="function__slider-link">Попробовать бесплатно &rarr;</a>
-                        <img src="<%=require('../images/uchet_zakazov_big.svg')%>" class="function__slider-image" alt="Учет заказов">
+                        <div class="function__tabs function__tabs_active function_tab2">
+                            <h3 class="function__slider-title">Расчет зарплаты</h3>
+                            <p class="function__slider-description">Cчитает зарплату для каждого сотрудника по индивидуальным правилам. Фиксирует все выплаты и отражает начисления в зарплатной ведомости.</p>
+                            <img src="<%=require('../images/raschet_zarplati_big.svg')%>" class="function__slider-image" alt="Расчет заказов">
+                            <a href="#" class="function__slider-link">Попробовать бесплатно &rarr;</a>
+                        </div>
+                        <div class="function__tabs function_tab1">
+                            <h3 class="function__slider-title">Учет заказов</h3>
+                            <p class="function__slider-description">Ускоряет оформление, позволяет не потерять ни один заказ и контролировать сроки исполнения, гибко взаимодействовать с клиентами, сохраняет историю работы с заказом.</p>
+                            <a href="#" class="function__slider-link">Попробовать бесплатно &rarr;</a>
+                            <img src="<%=require('../images/uchet_zakazov_big.svg')%>" class="function__slider-image" alt="Учет заказов">
+                        </div>
+                        <div class="function__tabs function_tab3">
+                            <h3 class="function__slider-title">Онлайн касса</h3>
+                            <p class="function__slider-description">Соответствует требованиям ФЗ № 54-ФЗ «О применении контрольно-кассовой техники». Поддерживает большинство моделей онлайн-касс на рынке.</p>
+                            <a href="#" class="function__slider-link">Попробовать бесплатно &rarr;</a>
+                            <img src="<%=require('../images/online_kacca_big.svg')%>" class="function__slider-image" alt="Онлайн касса">
+                        </div>
+                        <div class="function__tabs function_tab4">
+                            <h3 class="function__slider-title">Контроль рекламы</h3>
+                            <p class="function__slider-description">Предоставляет данные о расходах на рекламу, позволяет оценить её эффективность и принимать правильные решения.</p>
+                            <a href="#" class="function__slider-link">Попробовать бесплатно &rarr;</a>
+                            <img src="<%=require('../images/kontrol_reklami_big.svg')%>" class="function__slider-image" alt="Контроль рекламы">
+                        </div>
+                        <div class="function__tabs function_tab5">
+                            <h3 class="function__slider-title">Работа с поставщиками</h3>
+                            <p class="function__slider-description">Предоставляет актуальные данные о наличии, ценах, сроках отгрузки товара более чем у 200 крупных поставщиков со всей России и стран СНГ в режиме online.</p>
+                            <a href="#" class="function__slider-link">Попробовать бесплатно &rarr;</a>
+                            <img src="<%=require('../images/rabota_big.svg')%>" class="function__slider-image" alt="Работа с поставщиками">
+                        </div>
+                        <div class="function__tabs function_tab6">
+                            <h3 class="function__slider-title">Ведение продаж</h3>
+                            <p class="function__slider-description">Делает продажи прозрачными, исключает человеческий фактор при получении прибыли, позволяет быстро обрабатывать заказы с помощью сканера штрих-кодов.</p>
+                            <a href="#" class="function__slider-link">Попробовать бесплатно &rarr;</a>
+                            <img src="<%=require('../images/vvedenie_prodag_big.svg')%>" class="function__slider-image" alt="Ведение продаж">
+                        </div>
+                        <div class="function__tabs function_tab7">
+                            <h3 class="function__slider-title">Бухгалтерия и финансы</h3>
+                            <p class="function__slider-description">Заменяет собой 1С: систематизирует расчеты с поставщиками, ведет учёт товарно-материальных ценностей, осуществляет кассовые операции, контролирует задолженность и денежный поток в разрезе доходов и расходов.</p>
+                            <a href="#" class="function__slider-link">Попробовать бесплатно &rarr;</a>
+                            <img src="<%=require('../images/buhgalteria_big.svg')%>" class="function__slider-image" alt="Ведение продаж">
+                        </div>
+                        <div class="function__tabs function_tab8">
+                            <h3 class="function__slider-title">Статистика</h3>
+                            <p class="function__slider-description">Позволяет руководителю отслеживать статистику по всем бизнес-процессам сервисного центра и контролировать финансовый результат.</p>
+                            <a href="#" class="function__slider-link">Попробовать бесплатно &rarr;</a>
+                            <img src="<%=require('../images/statistika_big.svg')%>" class="function__slider-image" alt="Статистика">
+                        </div>
+                        <div class="function__tabs function_tab9">
+                            <h3 class="function__slider-title">Складской учет</h3>
+                            <p class="function__slider-description">Позволяет руководителю отслеживать статистику по всем бизнес-процессам сервисного центра и контролировать финансовый результат.</p>
+                            <a href="#" class="function__slider-link">Попробовать бесплатно &rarr;</a>
+                            <img src="<%=require('../images/skladskoy_uchet_big.svg')%>" class="function__slider-image" alt="Складской учет">
+                        </div>
+                        <div class="function__tabs function_tab10">
+                            <h3 class="function__slider-title">Рассылка уведомлений</h3>
+                            <p class="function__slider-description">SMS-уведомления для клиентов, Telegram-уведомления для сотрудников.</p>
+                            <a href="#" class="function__slider-link">Попробовать бесплатно &rarr;</a>
+                            <img src="<%=require('../images/rassilka_big.svg')%>" class="function__slider-image" alt="Рассылка уведомлений">
+                        </div>
+                        <div class="function__tabs function_tab11">
+                            <h3 class="function__slider-title">Печать документов</h3>
+                            <p class="function__slider-description">Предоставляет возможность распечатать все необходимые документы, в т.ч. квитанцию о приёме, товарные чеки, ценники и др. Содержит удобные шаблоны документов.</p>
+                            <a href="#" class="function__slider-link">Попробовать бесплатно &rarr;</a>
+                            <img src="<%=require('../images/print_big.svg')%>" class="function__slider-image" alt="Печать документов">
+                        </div>
+                        <div class="function__tabs function_tab12">
+                            <h3 class="function__slider-title">Менеджер задач</h3>
+                            <p class="function__slider-description">Организует работу персонала по задачам, контролирует соблюдение сроков исполнения.</p>
+                            <a href="#" class="function__slider-link">Попробовать бесплатно &rarr;</a>
+                            <img src="<%=require('../images/manager_big.svg')%>" class="function__slider-image" alt="Печать документов">
+                        </div>
                     </div>
                 </div>
             </section>
-            <section class="function function_none">
-                <div class="function__title-block">
-                    <h2 class="function__title">Основные функции</h2>
-                    <nav class="navigation-arrow">
-                        <button type="button" class="navigation-arrow__button"></button>
-                        <button type="button" class="navigation-arrow__button navigation-arrow__button_rotate navigation-arrow__button_blue"></button>
-                    </nav>
-                </div>
-                <div class="function__slider">
-                    <ul class="slider">
-                        <li class="slider__item"><img src="<%=require('../images/uchet_zakazov.svg')%>" class="slider__item-image" alt="Учет заказов"><p class="slider__item-description">Учет заказов</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/raschet_zarplati.svg')%>" class="slider__item-image" alt="Расчет заказов"><p class="slider__item-description">Расчет зарплаты</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/online_kacca.svg')%>" class="slider__item-image slider__item_active" alt="Онлайн касса"><p class="slider__item-description">Онлайн касса</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/kontrol_reklami.svg')%>" class="slider__item-image" alt="Контроль рекламы"><p class="slider__item-description">Контроль рекламы</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/rabota.svg')%>" class="slider__item-image" alt="Работа с поставщиками"><p class="slider__item-description">Работа с поставщиками</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/vvedenie_prodag.svg')%>" class="slider__item-image" alt="Ведение продаж"><p class="slider__item-description">Ведение продаж</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/buhgalteria.svg')%>" class="slider__item-image" alt="Бухгалтерия и финансы"><p class="slider__item-description">Бухгалтерия и финансы</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/statistika.svg')%>" class="slider__item-image" alt="статистика"><p class="slider__item-description">Статистика</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/skladskoy_uchet.svg')%>" class="slider__item-image" alt="Складской учет"><p class="slider__item-description">Складской учет</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/rassilka.svg')%>" class="slider__item-image" alt="Рассылка уведомлений"><p class="slider__item-description">Рассылка уведомлений</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/print.svg')%>" class="slider__item-image" alt="Печать документов"><p class="slider__item-description">Печать документов</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/manager.svg')%>" class="slider__item-image" alt="Менеджер задач"><p class="slider__item-description">Менеджер задач</p></li>
-                    </ul>
-                    <div class="function__slider-info">
-                        <h3 class="function__slider-title">Онлайн касса</h3>
-                        <p class="function__slider-description">Соответствует требованиям ФЗ № 54-ФЗ «О применении контрольно-кассовой техники». Поддерживает большинство моделей онлайн-касс на рынке.</p>
-                        <a href="#" class="function__slider-link">Попробовать бесплатно &rarr;</a>
-                        <img src="<%=require('../images/online_kacca_big.svg')%>" class="function__slider-image" alt="Онлайн касса">
-                    </div>
-                </div>
-            </section>
-            <section class="function function_none">
-                <div class="function__title-block">
-                    <h2 class="function__title">Основные функции</h2>
-                    <nav class="navigation-arrow">
-                        <button type="button" class="navigation-arrow__button"></button>
-                        <button type="button" class="navigation-arrow__button navigation-arrow__button_rotate navigation-arrow__button_blue"></button>
-                    </nav>
-                </div>
-                <div class="function__slider">
-                    <ul class="slider">
-                        <li class="slider__item"><img src="<%=require('../images/uchet_zakazov.svg')%>" class="slider__item-image" alt="Учет заказов"><p class="slider__item-description">Учет заказов</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/raschet_zarplati.svg')%>" class="slider__item-image" alt="Расчет заказов"><p class="slider__item-description">Расчет зарплаты</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/online_kacca.svg')%>" class="slider__item-image" alt="Онлайн касса"><p class="slider__item-description">Онлайн касса</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/kontrol_reklami.svg')%>" class="slider__item-image slider__item_active" alt="Контроль рекламы"><p class="slider__item-description">Контроль рекламы</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/rabota.svg')%>" class="slider__item-image" alt="Работа с поставщиками"><p class="slider__item-description">Работа с поставщиками</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/vvedenie_prodag.svg')%>" class="slider__item-image" alt="Ведение продаж"><p class="slider__item-description">Ведение продаж</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/buhgalteria.svg')%>" class="slider__item-image" alt="Бухгалтерия и финансы"><p class="slider__item-description">Бухгалтерия и финансы</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/statistika.svg')%>" class="slider__item-image" alt="статистика"><p class="slider__item-description">Статистика</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/skladskoy_uchet.svg')%>" class="slider__item-image" alt="Складской учет"><p class="slider__item-description">Складской учет</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/rassilka.svg')%>" class="slider__item-image" alt="Рассылка уведомлений"><p class="slider__item-description">Рассылка уведомлений</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/print.svg')%>" class="slider__item-image" alt="Печать документов"><p class="slider__item-description">Печать документов</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/manager.svg')%>" class="slider__item-image" alt="Менеджер задач"><p class="slider__item-description">Менеджер задач</p></li>
-                    </ul>
-                    <div class="function__slider-info">
-                        <h3 class="function__slider-title">Контроль рекламы</h3>
-                        <p class="function__slider-description">Предоставляет данные о расходах на рекламу, позволяет оценить её эффективность и принимать правильные решения.</p>
-                        <a href="#" class="function__slider-link">Попробовать бесплатно &rarr;</a>
-                        <img src="<%=require('../images/kontrol_reklami_big.svg')%>" class="function__slider-image" alt="Контроль рекламы">
-                    </div>
-                </div>
-            </section>
-            <section class="function function_none">
-                <div class="function__title-block">
-                    <h2 class="function__title">Основные функции</h2>
-                    <nav class="navigation-arrow">
-                        <button type="button" class="navigation-arrow__button"></button>
-                        <button type="button" class="navigation-arrow__button navigation-arrow__button_rotate navigation-arrow__button_blue"></button>
-                    </nav>
-                </div>
-                <div class="function__slider">
-                    <ul class="slider">
-                        <li class="slider__item"><img src="<%=require('../images/uchet_zakazov.svg')%>" class="slider__item-image" alt="Учет заказов"><p class="slider__item-description">Учет заказов</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/raschet_zarplati.svg')%>" class="slider__item-image" alt="Расчет заказов"><p class="slider__item-description">Расчет зарплаты</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/online_kacca.svg')%>" class="slider__item-image" alt="Онлайн касса"><p class="slider__item-description">Онлайн касса</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/kontrol_reklami.svg')%>" class="slider__item-image" alt="Контроль рекламы"><p class="slider__item-description">Контроль рекламы</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/rabota.svg')%>" class="slider__item-image slider__item_active" alt="Работа с поставщиками"><p class="slider__item-description">Работа с поставщиками</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/vvedenie_prodag.svg')%>" class="slider__item-image" alt="Ведение продаж"><p class="slider__item-description">Ведение продаж</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/buhgalteria.svg')%>" class="slider__item-image" alt="Бухгалтерия и финансы"><p class="slider__item-description">Бухгалтерия и финансы</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/statistika.svg')%>" class="slider__item-image" alt="статистика"><p class="slider__item-description">Статистика</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/skladskoy_uchet.svg')%>" class="slider__item-image" alt="Складской учет"><p class="slider__item-description">Складской учет</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/rassilka.svg')%>" class="slider__item-image" alt="Рассылка уведомлений"><p class="slider__item-description">Рассылка уведомлений</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/print.svg')%>" class="slider__item-image" alt="Печать документов"><p class="slider__item-description">Печать документов</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/manager.svg')%>" class="slider__item-image" alt="Менеджер задач"><p class="slider__item-description">Менеджер задач</p></li>
-                    </ul>
-                    <div class="function__slider-info">
-                        <h3 class="function__slider-title">Работа с поставщиками</h3>
-                        <p class="function__slider-description">Предоставляет актуальные данные о наличии, ценах, сроках отгрузки товара более чем у 200 крупных поставщиков со всей России и стран СНГ в режиме online.</p>
-                        <a href="#" class="function__slider-link">Попробовать бесплатно &rarr;</a>
-                        <img src="<%=require('../images/rabota_big.svg')%>" class="function__slider-image" alt="Работа с поставщиками">
-                    </div>
-                </div>
-            </section>
-            <section class="function function_none">
-                <div class="function__title-block">
-                    <h2 class="function__title">Основные функции</h2>
-                    <nav class="navigation-arrow">
-                        <button type="button" class="navigation-arrow__button"></button>
-                        <button type="button" class="navigation-arrow__button navigation-arrow__button_rotate navigation-arrow__button_blue"></button>
-                    </nav>
-                </div>
-                <div class="function__slider">
-                    <ul class="slider">
-                        <li class="slider__item"><img src="<%=require('../images/uchet_zakazov.svg')%>" class="slider__item-image" alt="Учет заказов"><p class="slider__item-description">Учет заказов</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/raschet_zarplati.svg')%>" class="slider__item-image" alt="Расчет заказов"><p class="slider__item-description">Расчет зарплаты</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/online_kacca.svg')%>" class="slider__item-image" alt="Онлайн касса"><p class="slider__item-description">Онлайн касса</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/kontrol_reklami.svg')%>" class="slider__item-image" alt="Контроль рекламы"><p class="slider__item-description">Контроль рекламы</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/rabota.svg')%>" class="slider__item-image" alt="Работа с поставщиками"><p class="slider__item-description">Работа с поставщиками</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/vvedenie_prodag.svg')%>" class="slider__item-image slider__item_active" alt="Ведение продаж"><p class="slider__item-description">Ведение продаж</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/buhgalteria.svg')%>" class="slider__item-image" alt="Бухгалтерия и финансы"><p class="slider__item-description">Бухгалтерия и финансы</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/statistika.svg')%>" class="slider__item-image" alt="статистика"><p class="slider__item-description">Статистика</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/skladskoy_uchet.svg')%>" class="slider__item-image" alt="Складской учет"><p class="slider__item-description">Складской учет</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/rassilka.svg')%>" class="slider__item-image" alt="Рассылка уведомлений"><p class="slider__item-description">Рассылка уведомлений</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/print.svg')%>" class="slider__item-image" alt="Печать документов"><p class="slider__item-description">Печать документов</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/manager.svg')%>" class="slider__item-image" alt="Менеджер задач"><p class="slider__item-description">Менеджер задач</p></li>
-                    </ul>
-                    <div class="function__slider-info">
-                        <h3 class="function__slider-title">Ведение продаж</h3>
-                        <p class="function__slider-description">Делает продажи прозрачными, исключает человеческий фактор при получении прибыли, позволяет быстро обрабатывать заказы с помощью сканера штрих-кодов.</p>
-                        <a href="#" class="function__slider-link">Попробовать бесплатно &rarr;</a>
-                        <img src="<%=require('../images/vvedenie_prodag_big.svg')%>" class="function__slider-image" alt="Ведение продаж">
-                    </div>
-                </div>
-            </section>
-            <section class="function function_none">
-                <div class="function__title-block">
-                    <h2 class="function__title">Основные функции</h2>
-                    <nav class="navigation-arrow">
-                        <button type="button" class="navigation-arrow__button"></button>
-                        <button type="button" class="navigation-arrow__button navigation-arrow__button_rotate navigation-arrow__button_blue"></button>
-                    </nav>
-                </div>
-                <div class="function__slider">
-                    <ul class="slider">
-                        <li class="slider__item"><img src="<%=require('../images/uchet_zakazov.svg')%>" class="slider__item-image" alt="Учет заказов"><p class="slider__item-description">Учет заказов</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/raschet_zarplati.svg')%>" class="slider__item-image" alt="Расчет заказов"><p class="slider__item-description">Расчет зарплаты</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/online_kacca.svg')%>" class="slider__item-image" alt="Онлайн касса"><p class="slider__item-description">Онлайн касса</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/kontrol_reklami.svg')%>" class="slider__item-image" alt="Контроль рекламы"><p class="slider__item-description">Контроль рекламы</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/rabota.svg')%>" class="slider__item-image" alt="Работа с поставщиками"><p class="slider__item-description">Работа с поставщиками</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/vvedenie_prodag.svg')%>" class="slider__item-image" alt="Ведение продаж"><p class="slider__item-description">Ведение продаж</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/buhgalteria.svg')%>" class="slider__item-image slider__item_active" alt="Бухгалтерия и финансы"><p class="slider__item-description">Бухгалтерия и финансы</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/statistika.svg')%>" class="slider__item-image" alt="статистика"><p class="slider__item-description">Статистика</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/skladskoy_uchet.svg')%>" class="slider__item-image" alt="Складской учет"><p class="slider__item-description">Складской учет</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/rassilka.svg')%>" class="slider__item-image" alt="Рассылка уведомлений"><p class="slider__item-description">Рассылка уведомлений</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/print.svg')%>" class="slider__item-image" alt="Печать документов"><p class="slider__item-description">Печать документов</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/manager.svg')%>" class="slider__item-image" alt="Менеджер задач"><p class="slider__item-description">Менеджер задач</p></li>
-                    </ul>
-                    <div class="function__slider-info">
-                        <h3 class="function__slider-title">Бухгалтерия и финансы</h3>
-                        <p class="function__slider-description">Заменяет собой 1С: систематизирует расчеты с поставщиками, ведет учёт товарно-материальных ценностей, осуществляет кассовые операции, контролирует задолженность и денежный поток в разрезе доходов и расходов.</p>
-                        <a href="#" class="function__slider-link">Попробовать бесплатно &rarr;</a>
-                        <img src="<%=require('../images/buhgalteria_big.svg')%>" class="function__slider-image" alt="Ведение продаж">
-                    </div>
-                </div>
-            </section>
-            <section class="function function_none">
-                <div class="function__title-block">
-                    <h2 class="function__title">Основные функции</h2>
-                    <nav class="navigation-arrow">
-                        <button type="button" class="navigation-arrow__button"></button>
-                        <button type="button" class="navigation-arrow__button navigation-arrow__button_rotate navigation-arrow__button_blue"></button>
-                    </nav>
-                </div>
-                <div class="function__slider">
-                    <ul class="slider">
-                        <li class="slider__item"><img src="<%=require('../images/uchet_zakazov.svg')%>" class="slider__item-image" alt="Учет заказов"><p class="slider__item-description">Учет заказов</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/raschet_zarplati.svg')%>" class="slider__item-image" alt="Расчет заказов"><p class="slider__item-description">Расчет зарплаты</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/online_kacca.svg')%>" class="slider__item-image" alt="Онлайн касса"><p class="slider__item-description">Онлайн касса</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/kontrol_reklami.svg')%>" class="slider__item-image" alt="Контроль рекламы"><p class="slider__item-description">Контроль рекламы</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/rabota.svg')%>" class="slider__item-image" alt="Работа с поставщиками"><p class="slider__item-description">Работа с поставщиками</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/vvedenie_prodag.svg')%>" class="slider__item-image" alt="Ведение продаж"><p class="slider__item-description">Ведение продаж</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/buhgalteria.svg')%>" class="slider__item-image" alt="Бухгалтерия и финансы"><p class="slider__item-description">Бухгалтерия и финансы</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/statistika.svg')%>" class="slider__item-image slider__item_active" alt="статистика"><p class="slider__item-description">Статистика</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/skladskoy_uchet.svg')%>" class="slider__item-image" alt="Складской учет"><p class="slider__item-description">Складской учет</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/rassilka.svg')%>" class="slider__item-image" alt="Рассылка уведомлений"><p class="slider__item-description">Рассылка уведомлений</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/print.svg')%>" class="slider__item-image" alt="Печать документов"><p class="slider__item-description">Печать документов</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/manager.svg')%>" class="slider__item-image" alt="Менеджер задач"><p class="slider__item-description">Менеджер задач</p></li>
-                    </ul>
-                    <div class="function__slider-info">
-                        <h3 class="function__slider-title">Статистика</h3>
-                        <p class="function__slider-description">Позволяет руководителю отслеживать статистику по всем бизнес-процессам сервисного центра и контролировать финансовый результат.</p>
-                        <a href="#" class="function__slider-link">Попробовать бесплатно &rarr;</a>
-                        <img src="<%=require('../images/statistika_big.svg')%>" class="function__slider-image" alt="Статистика">
-                    </div>
-                </div>
-            </section>
-            <section class="function function_none">
-                <div class="function__title-block">
-                    <h2 class="function__title">Основные функции</h2>
-                    <nav class="navigation-arrow">
-                        <button type="button" class="navigation-arrow__button"></button>
-                        <button type="button" class="navigation-arrow__button navigation-arrow__button_rotate navigation-arrow__button_blue"></button>
-                    </nav>
-                </div>
-                <div class="function__slider">
-                    <ul class="slider">
-                        <li class="slider__item"><img src="<%=require('../images/uchet_zakazov.svg')%>" class="slider__item-image" alt="Учет заказов"><p class="slider__item-description">Учет заказов</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/raschet_zarplati.svg')%>" class="slider__item-image" alt="Расчет заказов"><p class="slider__item-description">Расчет зарплаты</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/online_kacca.svg')%>" class="slider__item-image" alt="Онлайн касса"><p class="slider__item-description">Онлайн касса</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/kontrol_reklami.svg')%>" class="slider__item-image" alt="Контроль рекламы"><p class="slider__item-description">Контроль рекламы</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/rabota.svg')%>" class="slider__item-image" alt="Работа с поставщиками"><p class="slider__item-description">Работа с поставщиками</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/vvedenie_prodag.svg')%>" class="slider__item-image" alt="Ведение продаж"><p class="slider__item-description">Ведение продаж</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/buhgalteria.svg')%>" class="slider__item-image" alt="Бухгалтерия и финансы"><p class="slider__item-description">Бухгалтерия и финансы</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/statistika.svg')%>" class="slider__item-image" alt="статистика"><p class="slider__item-description">Статистика</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/skladskoy_uchet.svg')%>" class="slider__item-image slider__item_active" alt="Складской учет"><p class="slider__item-description">Складской учет</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/rassilka.svg')%>" class="slider__item-image" alt="Рассылка уведомлений"><p class="slider__item-description">Рассылка уведомлений</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/print.svg')%>" class="slider__item-image" alt="Печать документов"><p class="slider__item-description">Печать документов</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/manager.svg')%>" class="slider__item-image" alt="Менеджер задач"><p class="slider__item-description">Менеджер задач</p></li>
-                    </ul>
-                    <div class="function__slider-info">
-                        <h3 class="function__slider-title">Складской учет</h3>
-                        <p class="function__slider-description">Позволяет руководителю отслеживать статистику по всем бизнес-процессам сервисного центра и контролировать финансовый результат.</p>
-                        <a href="#" class="function__slider-link">Попробовать бесплатно &rarr;</a>
-                        <img src="<%=require('../images/skladskoy_uchet_big.svg')%>" class="function__slider-image" alt="Складской учет">
-                    </div>
-                </div>
-            </section>
-            <section class="function function_none">
-                <div class="function__title-block">
-                    <h2 class="function__title">Основные функции</h2>
-                    <nav class="navigation-arrow">
-                        <button type="button" class="navigation-arrow__button"></button>
-                        <button type="button" class="navigation-arrow__button navigation-arrow__button_rotate navigation-arrow__button_blue"></button>
-                    </nav>
-                </div>
-                <div class="function__slider">
-                    <ul class="slider">
-                        <li class="slider__item"><img src="<%=require('../images/uchet_zakazov.svg')%>" class="slider__item-image" alt="Учет заказов"><p class="slider__item-description">Учет заказов</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/raschet_zarplati.svg')%>" class="slider__item-image" alt="Расчет заказов"><p class="slider__item-description">Расчет зарплаты</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/online_kacca.svg')%>" class="slider__item-image" alt="Онлайн касса"><p class="slider__item-description">Онлайн касса</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/kontrol_reklami.svg')%>" class="slider__item-image" alt="Контроль рекламы"><p class="slider__item-description">Контроль рекламы</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/rabota.svg')%>" class="slider__item-image" alt="Работа с поставщиками"><p class="slider__item-description">Работа с поставщиками</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/vvedenie_prodag.svg')%>" class="slider__item-image" alt="Ведение продаж"><p class="slider__item-description">Ведение продаж</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/buhgalteria.svg')%>" class="slider__item-image" alt="Бухгалтерия и финансы"><p class="slider__item-description">Бухгалтерия и финансы</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/statistika.svg')%>" class="slider__item-image" alt="статистика"><p class="slider__item-description">Статистика</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/skladskoy_uchet.svg')%>" class="slider__item-image" alt="Складской учет"><p class="slider__item-description">Складской учет</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/rassilka.svg')%>" class="slider__item-image slider__item_active" alt="Рассылка уведомлений"><p class="slider__item-description">Рассылка уведомлений</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/print.svg')%>" class="slider__item-image" alt="Печать документов"><p class="slider__item-description">Печать документов</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/manager.svg')%>" class="slider__item-image" alt="Менеджер задач"><p class="slider__item-description">Менеджер задач</p></li>
-                    </ul>
-                    <div class="function__slider-info">
-                        <h3 class="function__slider-title">Рассылка уведомлений</h3>
-                        <p class="function__slider-description">SMS-уведомления для клиентов, Telegram-уведомления для сотрудников.</p>
-                        <a href="#" class="function__slider-link">Попробовать бесплатно &rarr;</a>
-                        <img src="<%=require('../images/rassilka_big.svg')%>" class="function__slider-image" alt="Рассылка уведомлений">
-                    </div>
-                </div>
-            </section>
-            <section class="function function_none">
-                <div class="function__title-block">
-                    <h2 class="function__title">Основные функции</h2>
-                    <nav class="navigation-arrow">
-                        <button type="button" class="navigation-arrow__button"></button>
-                        <button type="button" class="navigation-arrow__button navigation-arrow__button_rotate navigation-arrow__button_blue"></button>
-                    </nav>
-                </div>
-                <div class="function__slider">
-                    <ul class="slider">
-                        <li class="slider__item"><img src="<%=require('../images/uchet_zakazov.svg')%>" class="slider__item-image" alt="Учет заказов"><p class="slider__item-description">Учет заказов</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/raschet_zarplati.svg')%>" class="slider__item-image" alt="Расчет заказов"><p class="slider__item-description">Расчет зарплаты</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/online_kacca.svg')%>" class="slider__item-image" alt="Онлайн касса"><p class="slider__item-description">Онлайн касса</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/kontrol_reklami.svg')%>" class="slider__item-image" alt="Контроль рекламы"><p class="slider__item-description">Контроль рекламы</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/rabota.svg')%>" class="slider__item-image" alt="Работа с поставщиками"><p class="slider__item-description">Работа с поставщиками</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/vvedenie_prodag.svg')%>" class="slider__item-image" alt="Ведение продаж"><p class="slider__item-description">Ведение продаж</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/buhgalteria.svg')%>" class="slider__item-image" alt="Бухгалтерия и финансы"><p class="slider__item-description">Бухгалтерия и финансы</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/statistika.svg')%>" class="slider__item-image" alt="статистика"><p class="slider__item-description">Статистика</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/skladskoy_uchet.svg')%>" class="slider__item-image" alt="Складской учет"><p class="slider__item-description">Складской учет</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/rassilka.svg')%>" class="slider__item-image" alt="Рассылка уведомлений"><p class="slider__item-description">Рассылка уведомлений</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/print.svg')%>" class="slider__item-image slider__item_active" alt="Печать документов"><p class="slider__item-description">Печать документов</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/manager.svg')%>" class="slider__item-image" alt="Менеджер задач"><p class="slider__item-description">Менеджер задач</p></li>
-                    </ul>
-                    <div class="function__slider-info">
-                        <h3 class="function__slider-title">Печать документов</h3>
-                        <p class="function__slider-description">Предоставляет возможность распечатать все необходимые документы, в т.ч. квитанцию о приёме, товарные чеки, ценники и др. Содержит удобные шаблоны документов.</p>
-                        <a href="#" class="function__slider-link">Попробовать бесплатно &rarr;</a>
-                        <img src="<%=require('../images/print_big.svg')%>" class="function__slider-image" alt="Печать документов">
-                    </div>
-                </div>
-            </section>
-            <section class="function function_none">
-                <div class="function__title-block">
-                    <h2 class="function__title">Основные функции</h2>
-                    <nav class="navigation-arrow">
-                        <button type="button" class="navigation-arrow__button"></button>
-                        <button type="button" class="navigation-arrow__button navigation-arrow__button_rotate navigation-arrow__button_blue"></button>
-                    </nav>
-                </div>
-                <div class="function__slider">
-                    <ul class="slider">
-                        <li class="slider__item"><img src="<%=require('../images/uchet_zakazov.svg')%>" class="slider__item-image" alt="Учет заказов"><p class="slider__item-description">Учет заказов</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/raschet_zarplati.svg')%>" class="slider__item-image" alt="Расчет заказов"><p class="slider__item-description">Расчет зарплаты</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/online_kacca.svg')%>" class="slider__item-image" alt="Онлайн касса"><p class="slider__item-description">Онлайн касса</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/kontrol_reklami.svg')%>" class="slider__item-image" alt="Контроль рекламы"><p class="slider__item-description">Контроль рекламы</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/rabota.svg')%>" class="slider__item-image" alt="Работа с поставщиками"><p class="slider__item-description">Работа с поставщиками</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/vvedenie_prodag.svg')%>" class="slider__item-image" alt="Ведение продаж"><p class="slider__item-description">Ведение продаж</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/buhgalteria.svg')%>" class="slider__item-image" alt="Бухгалтерия и финансы"><p class="slider__item-description">Бухгалтерия и финансы</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/statistika.svg')%>" class="slider__item-image" alt="статистика"><p class="slider__item-description">Статистика</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/skladskoy_uchet.svg')%>" class="slider__item-image" alt="Складской учет"><p class="slider__item-description">Складской учет</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/rassilka.svg')%>" class="slider__item-image" alt="Рассылка уведомлений"><p class="slider__item-description">Рассылка уведомлений</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/print.svg')%>" class="slider__item-image" alt="Печать документов"><p class="slider__item-description">Печать документов</p></li>
-                        <li class="slider__item"><img src="<%=require('../images/manager.svg')%>" class="slider__item-image slider__item_active" alt="Менеджер задач"><p class="slider__item-description">Менеджер задач</p></li>
-                    </ul>
-                    <div class="function__slider-info">
-                        <h3 class="function__slider-title">Менеджер задач</h3>
-                        <p class="function__slider-description">Организует работу персонала по задачам, контролирует соблюдение сроков исполнения.</p>
-                        <a href="#" class="function__slider-link">Попробовать бесплатно &rarr;</a>
-                        <img src="<%=require('../images/manager_big.svg')%>" class="function__slider-image" alt="Печать документов">
-                    </div>
-                </div>
-            </section>
-            <section class="vozmognosti">
-                <h2 class="vozmognosti__title">Возможности</h2>
-                <div class="vozmognosti__info">
+            <section id="vozm" class="vozmognosti">
+                <h2 class="vozmognosti__title title__font">Возможности</h2>
+                <div class="vozmognosti__info one">
                     <nav class="vozmognosti__info-navigation">
                         <ul class="vozmognosti__info-navigation-list">
-                            <li class="vozmognosti__info-navigation-list-item button button_radius-14">Интеграция с прайсами<br> поставщиков со всей России</li>
-                            <li class="vozmognosti__info-navigation-list-item button button_radius-14">Замена бухгалтерской программы (1С)</li>
-                            <li class="vozmognosti__info-navigation-list-item button button_radius-14 button_radius-14_active" >Продвинутая CRM-система</li>
-                            <li class="vozmognosti__info-navigation-list-item button button_radius-14">Интеграция с контрольно-кассовыми терминалами, мессенджерами, сервисами</li>
-                            <li class="vozmognosti__info-navigation-list-item button button_radius-14">Простой и удобный интерфейс</li>
-                            <li class="vozmognosti__info-navigation-list-item button button_radius-14">Современные технологии</li>
+                            <li id="voz_tab1" class="vozmognosti__info-navigation-list-item">
+                                <div class="vozmognosti__info-navigation-list-item-title">
+                                    Интеграция с прайсами<br> поставщиков со всей России
+                                </div>                     
+                            </li>
+                            <div class="voz__tabs voz_tab1 vozmognosti__info-description">
+                                <h3 class="vozmognosti__info-description-title">Интеграция с прайсами поставщиков со всей России</h3>
+                                <p class="">Интеграция с прайсами поставщиков со всей России</p>
+                            </div>          
+                            <li id="voz_tab2" class="vozmognosti__info-navigation-list-item">
+                                <div class="vozmognosti__info-navigation-list-item-title">Замена бухгалтерской программы (1С)</div>
+                            </li>
+                            <div class="voz__tabs voz_tab2 vozmognosti__info-description">
+                                <h3 class="vozmognosti__info-description-title">Замена бухгалтерской программы (1С)</h3>
+                                <p class="">Замена бухгалтерской программы (1С)</p>
+                            </div>   
+                            <li id="voz_tab3" class="vozmognosti__info-navigation-list-item">
+                                <div class="vozmognosti__info-navigation-list-item-title">Продвинутая CRM-система</div>
+                            </li>
+                            <div class="voz__tabs voz_tab3 vozmognosti__info-description vozmognosti__info-description_active">
+                                <h3 class="vozmognosti__info-description-title">Продвинутая CRM-система</h3>
+                                    <ul class="vozmognosti__info-description-list">
+                                    <li class="vozmognosti__info-description-list-item"><span>LiveSklad имеет возможности продвинутой СРМ-системы</span></li>
+                                    <li class="vozmognosti__info-description-list-item"><span>Для тех, кто хочет работать с клиентами эффективно, программа предоставляет множество инструментов учёта заказов, выбора по параметрам, аналитики продаж.</span></li>
+                                    <li class="vozmognosti__info-description-list-item"><span>Вы сможете настроить и сделать отправку смс-сообщений вашим клиентам.</span></li>
+                                    <li class="vozmognosti__info-description-list-item"><span>Автоматизация управления клиентской базой позволит улучшить качество обслуживания Ваших клиентов, увеличит рост повторных продаж и прибыльности бизнеса в целом.</span></li>
+                                </ul>
+                            </div>
+                            <li id="voz_tab4" class="vozmognosti__info-navigation-list-item">
+                                <div class="vozmognosti__info-navigation-list-item-title">Интеграция с контрольно-кассовыми терминалами, мессенджерами, сервисами</div>  
+                            </li>
+                            <div class="voz__tabs voz_tab4 vozmognosti__info-description">
+                                <h3 class="vozmognosti__info-description-title">Интеграция с контрольно-кассовыми терминалами, мессенджерами, сервисами</h3>
+                                <p class="">Интеграция с контрольно-кассовыми терминалами, мессенджерами, сервисами</p>
+                            </div> 
+                            <li id="voz_tab5" class="vozmognosti__info-navigation-list-item">
+                                <div class="vozmognosti__info-navigation-list-item-title">Простой и удобный интерфейс</div>      
+                            </li>
+                            <div class="voz__tabs voz_tab5 vozmognosti__info-description">
+                                <h3 class="vozmognosti__info-description-title">Простой и удобный интерфейс</h3>
+                                <p class="">Простой и удобный интерфейс</p>
+                            </div>      
+                            <li id="voz_tab6" class="vozmognosti__info-navigation-list-item">
+                                <div class="vozmognosti__info-navigation-list-item-title">Современные технологии</div>
+                            </li>
+                            <div class="voz__tabs voz_tab6 vozmognosti__info-description">
+                                <h3 class="vozmognosti__info-description-title">Современные технологии</h3>
+                                <p class="">Современные технологии</p>
+                            </div>  
                         </ul>
                     </nav>
-                    <div class="vozmognosti__info-description">
-                        <h3 class="vozmognosti__info-description-title">Продвинутая CRM-система</h3>
-                        <ul class="vozmognosti__info-description-list">
-                            <li class="vozmognosti__info-description-list-item"><span>LiveSklad имеет возможности продвинутой СРМ-системы</span></li>
-                            <li class="vozmognosti__info-description-list-item"><span>Для тех, кто хочет работать с клиентами эффективно, программа предоставляет множество инструментов учёта заказов, выбора по параметрам, аналитики продаж.</span></li>
-                            <li class="vozmognosti__info-description-list-item"><span>Вы сможете настроить и сделать отправку смс-сообщений вашим клиентам.</span></li>
-                            <li class="vozmognosti__info-description-list-item"><span>Автоматизация управления клиентской базой позволит улучшить качество обслуживания Ваших клиентов, увеличит рост повторных продаж и прибыльности бизнеса в целом.</span></li>
-                        </ul>
-                    </div>
                 </div>
             </section>
             <section class="integration">
-                <h2 class="integration__title font__title">Интегрируется с 200+ сервисами</h2>
+                <h2 class="integration__title">Интегрируется с 200+ сервисами</h2>
                 <ul class="integration__list">
                     <li class="integration__list-item">
                         <img src="<%=require('../images/dom.jpg')%>" alt="Дом" class="integration__list-item-image">
@@ -698,22 +432,22 @@
                     </li>
                 </ul>
             </section>
-            <section class="tarif">
+            <section id="tarif" class="tarif">
                 <div class="tarif__title-block">
-                    <h2 class="tarif__title font__title">Тарифы</h2>
+                    <h2 class="tarif__title">Тарифы</h2>
                     <nav class="tarif__navigation">
                         <ul class="tarif__navigation-list">
-                            <li class="tarif__navigation-list-item">
+                            <li class="tarif__navigation-list-item tarif__navigation-list-item_active" data-month="1" data-skidka="0">
                                 <span class="tarif__navigation-list-item_bold">Стандарт</span>
                             </li>
-                            <li class="tarif__navigation-list-item tarif__navigation-list-item_active">
+                            <li class="tarif__navigation-list-item" data-month="3" data-skidka="10">
                                 <span class="tarif__navigation-list-item_bold">З мес</span>
                                 скидка 10%</li>
-                            <li class="tarif__navigation-list-item">
+                            <li class="tarif__navigation-list-item" data-month="6" data-skidka="15">
                                 <span class="tarif__navigation-list-item_bold">6 мес</span>
                                 скидка 15%
                             </li>
-                            <li class="tarif__navigation-list-item">
+                            <li class="tarif__navigation-list-item" data-month="12" data-skidka="20">
                                 <span class="tarif__navigation-list-item_bold">12 мес</span>
                                 скидка 20%
                             </li>
@@ -725,64 +459,64 @@
                 <li class="tarif__card-item">
                     <ul class="tarif__card-item-list">
                         <li class="tarif__card-item-name font__card-name">Стартовый</li>
-                        <li class="tarif__card-item-price font__card-price">500</li>                            
+                        <li class="tarif__card-item-price_calc tarif__card-item-price tarif__card-item-price_font font__card-price" data-price="500">500</li>                            
                         <li class="tarif__card-item-price font__card-price-description">руб. / месяц</li>
                         <li class="tarif__card-item-line font__card-description ">2 сотрудника</li>
-                        <li class="font__card-description">1 мастерская</li>
+                        <li class="tarif__card-description_bottom font__card-description">1 мастерская</li>
                     </ul>
                 </li>
                 <li class="tarif__card-item tarif__card-item_active">
                     <ul class="tarif__card-item-list">
                         <li class="tarif__card-item-name tarif__card-item-name_active font__card-name">Базовый</li>
-                        <li class="tarif__card-item-price tarif__card-item-price_active font__card-price">1000</li>                            
+                        <li class="tarif__card-item-price_calc tarif__card-item-price tarif__card-item-price_active font__card-price" data-price="1000">1000</li>                            
                         <li class="tarif__card-item-price tarif__card-item-price_active font__card-price-description">руб. / месяц</li>
-                        <li class="tarif__card-item-line tarif__card-item-line_active font__card-description ">5 сотрудников</li>
-                        <li class="font__card-description tarif__card-description tarif__card-description_active">1 мастерская</li>
+                        <li class="tarif__card-item-line font__card-description tarif__card-item-line_active">5 сотрудников</li>
+                        <li class="tarif__card-description_bottom tarif__card-description font__card-description tarif__card-description_active">1 мастерская</li>
                     </ul>
                 </li>
                 <li class="tarif__card-item">
                     <ul class="tarif__card-item-list">
                         <li class="tarif__card-item-name font__card-name">Профи</li>
-                        <li class="tarif__card-item-price font__card-price">1900</li>                            
+                        <li class="tarif__card-item-price_calc tarif__card-item-price font__card-price" data-price="1900">1900</li>                            
                         <li class="tarif__card-item-price font__card-price-description">руб. / месяц</li>
                         <li class="tarif__card-item-line font__card-description ">8 сотрудников</li>
-                        <li class="font__card-description">2 мастерских</li>
+                        <li class="tarif__card-description_bottom font__card-description">2 мастерских</li>
                     </ul>
                 </li>
                 <li class="tarif__card-item">
                     <ul class="tarif__card-item-list">
                         <li class="tarif__card-item-name font__card-name">Малый бизнес</li>
-                        <li class="tarif__card-item-price font__card-price">2900</li>                            
+                        <li class="tarif__card-item-price_calc tarif__card-item-price font__card-price" data-price="2900">2900</li>                            
                         <li class="tarif__card-item-price font__card-price-description">руб. / месяц</li>
                         <li class="tarif__card-item-line font__card-description ">12 сотрудников</li>
-                        <li class="font__card-description">3 мастерских</li>
+                        <li class="tarif__card-description_bottom font__card-description">3 мастерских</li>
                     </ul>
                 </li>
                 <li class="tarif__card-item">
                     <ul class="tarif__card-item-list">
                         <li class="tarif__card-item-name font__card-name">Бизнес</li>
-                        <li class="tarif__card-item-price font__card-price">3900</li>                            
+                        <li class="tarif__card-item-price_calc tarif__card-item-price font__card-price" data-price="3900">3900</li>                            
                         <li class="tarif__card-item-price font__card-price-description">руб. / месяц</li>
                         <li class="tarif__card-item-line font__card-description ">20 сотрудников</li>
-                        <li class="font__card-description">5 мастерских</li>
+                        <li class="tarif__card-description_bottom font__card-description">5 мастерских</li>
                     </ul>
                 </li>
                 <li class="tarif__card-item">
                     <ul class="tarif__card-item-list">
                         <li class="tarif__card-item-name font__card-name">Сеть</li>
-                        <li class="tarif__card-item-price font__card-price">6500</li>                            
+                        <li class="tarif__card-item-price_calc tarif__card-item-price font__card-price" data-price="6500">6500</li>                            
                         <li class="tarif__card-item-price font__card-price-description">руб. / месяц</li>
                         <li class="tarif__card-item-line font__card-description ">40 сотрудников</li>
-                        <li class="font__card-description">10 мастерских</li>
+                        <li class="tarif__card-description_bottom font__card-description">10 мастерских</li>
                     </ul>
                 </li>
                 <li class="tarif__card-item">
                     <ul class="tarif__card-item-list">
                         <li class="tarif__card-item-name font__card-name">Ультра</li>
-                        <li class="tarif__card-item-price font__card-price">7800</li>                            
+                        <li class="tarif__card-item-price_calc tarif__card-item-price font__card-price" data-price="7800">7800</li>                            
                         <li class="tarif__card-item-price font__card-price-description">руб. / месяц</li>
                         <li class="tarif__card-item-line font__card-description ">80 сотрудников</li>
-                        <li class="font__card-description">20 мастерских</li>
+                        <li class="tarif__card-description_bottom font__card-description">20 мастерских</li>
                     </ul>
                 </li>
                 <li class="tarif__card-item">
@@ -791,26 +525,40 @@
                         <li class="tarif__card-item-price font__card-price">Свой</li>                            
                         <li class="tarif__card-item-price font__card-price-description">руб. / месяц</li>
                         <li class="tarif__card-item-line font__card-description ">&infin; сотрудников</li>
-                        <li class="font__card-description">&infin; мастерских</li>
+                        <li class="tarif__card-description_bottom font__card-description">&infin; мастерских</li>
                     </ul>
                 </li>
                 
             </section>
             <section class="reviews">
-                <h2 class="reviews__title font__title">Отзывы пользователей</h2>
+                <h2 class="reviews__title">Отзывы пользователей</h2>
                 <div class="reviews__block">
-                    <ul class="reviews__block-review">
-                        <li class="reviews__block-review-item font-review-name">Егор Соколов</li>
-                        <li class="reviews__block-review-item reviews__block-review-item_mt20 font-review">Для целевой сети сервисов подошла идеально</li>
-                        <li class="reviews__block-review-item reviews__block-review-item_mt26 font-review-plus-minus">Плюсы</li>
-                        <li class="reviews__block-review-item reviews__block-review-item_mt10 font-review">А также тщательные исследования конкурентов формируют глобальную экономическую сеть и при этом - превращены в посмешище, хотя само их существование приносит несомненную пользу обществу.</li>
-                        <li class="reviews__block-review-item reviews__block-review-item_mt26 font-review-plus-minus">Минусы</li>
-                        <li class="reviews__block-review-item reviews__block-review-item_mt10 font-review">А также тщательные исследования конкурентов формируют</li>
-                        <img src="<%=require('../images/egor.jpg')%>" alt="Егор Соколов" class="reviews__block-review-image">
-                    </ul>
+                    <div class="reviews__block-review">
+                        <ul class="reviews__block-review-list">
+                            <img src="<%=require('../images/egor.jpg')%>" alt="Егор Соколов" class="reviews__block-review-image">
+                                <li class="reviews__block-review-item font-review-name">Егор Соколов</li>
+                                <li class="reviews__block-review-item reviews__block-review-item_mt20 font-review">Для целевой сети сервисов подошла идеально</li>
+                                <li class="reviews__block-review-item reviews__block-review-item_mt26 font-review-plus-minus">Плюсы</li>
+                                <li class="reviews__block-review-item reviews__block-review-item_mt10 font-review">А также тщательные исследования конкурентов формируют глобальную экономическую сеть и при этом - превращены в посмешище, хотя само их существование приносит несомненную пользу обществу.</li>
+                                <li class="reviews__block-review-item reviews__block-review-item_mt26 font-review-plus-minus">Минусы</li>
+                                <li class="reviews__block-review-item reviews__block-review-item_mt10 font-review">А также тщательные исследования конкурентов формируют</li>
+                        </ul>
+                        <ul class="reviews__block-review-list">
+                            <img src="<%=require('../images/egor.jpg')%>" alt="Егор Соколов" class="reviews__block-review-image">
+                                <li class="reviews__block-review-item font-review-name">Егор Соколов</li>
+                                <li class="reviews__block-review-item reviews__block-review-item_mt20 font-review">Для целевой сети сервисов подошла идеально</li>
+                                <li class="reviews__block-review-item reviews__block-review-item_mt26 font-review-plus-minus">Плюсы</li>
+                                <li class="reviews__block-review-item reviews__block-review-item_mt10 font-review">А также тщательные исследования конкурентов формируют глобальную экономическую сеть и при этом - превращены в посмешище, хотя само их существование приносит несомненную пользу обществу.</li>
+                                <li class="reviews__block-review-item reviews__block-review-item_mt26 font-review-plus-minus">Минусы</li>
+                                <li class="reviews__block-review-item reviews__block-review-item_mt10 font-review">А также тщательные исследования конкурентов формируют</li>
+                        </ul>
+                    </div>
+                    
                     <div class="reviews__block-like">
-                        <img src="<%=require('../images/like.svg')%>" alt="Like" class="reviews__block-like-image">
-                        <p class="reviews__block-like-description font-like">LiveSklad - лучшая программа для сервисных центров по версии сайта crmindex.ru</p>
+                        <div class="reviews__block-like-container">
+                            <img src="<%=require('../images/like.svg')%>" alt="Like" class="reviews__block-like-image">
+                            <p class="reviews__block-like-description font-like">LiveSklad - лучшая программа для сервисных центров по версии сайта crmindex.ru</p>
+                        </div>
                         <img src="<%=require('../images/crmindex.svg')%>" alt="Like" class="reviews__block-like-image-crm">
                     </div>
                 </div>
@@ -818,9 +566,10 @@
             <section class="freetest">
                 <img src="<%=require('../images/notebook.png')%>" class="freetest__image" alt="Ноутбук">
                 <p class="freetest__text">Попробуйте весь функционал LiveSklad. Бесплатный доступ на 7 дней</p>
-                <button type="button" class="freetest__button button button__blue">Попробовать бесплатно</button>
+                <button type="button" class="button__free freetest__button button button__blue">Попробовать бесплатно</button>
             </section>
             <section class="doyouknow">
+                <img src="<%=require('../images/copy.png')%>" class="doyouknow__image" alt="Перенос">
                 <h4 class="doyouknow__title">А вы знаете что в LiveSklad можно перенести данные из другой системы?</h4>
                 <p class="doyouknow__description">Какие данные удастся сохранить  при переходе:</p>
                 <ul class="doyouknow__list">
@@ -830,51 +579,64 @@
                     <li class="doyouknow__list-item doyouknow__list-item-sprav">Справочники работ, товаров, устройств и неисправностей</li>
                 </ul>
 
-                <button type="button" class="doyouknow__button button button__white">Перенести данные</button>
-                <img src="<%=require('../images/copy.png')%>" class="doyouknow__image" alt="Перенос">
+                <button type="button" class="button__free doyouknow__button button button__white">Перенести данные</button>
+                
             </section>
             <section class="question-answer">
-                <h2 class="reviews__title font__title">Вопрос ответ</h2>
+                <h2 class="question-answer__title">Вопрос ответ</h2>
                 <ul class="question-answer__list">
                     <li class="question-answer__list-item">
                         <div class="question-answer__list-item-section">
-                            <h3 class="question-answer__list-item-title">Интеграция с прайсами поставщиков со всей России</h3>
-                            <img src="<%=require('../images/fi_plus.svg')%>" alt="Plus" class="question-answer__list-item-image">
+                            <h3 class="question-answer__list-item-title">Интеграция с прайсами поставщиков со всей России</h3>     
                         </div>
+                        <div class="question-answer__list-item-desc">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint tempora inventore, nam libero laboriosam suscipit, sunt excepturi commodi aspernatur sit quam dicta, quibusdam magnam. Exercitationem magni doloribus error earum recusandae!
+                        </div>  
                     </li>
                     <li class="question-answer__list-item">
                         <div class="question-answer__list-item-section">
                             <h3 class="question-answer__list-item-title">Замена бухгалтерской программы (1С)</h3>
-                            <img src="<%=require('../images/fi_plus.svg')%>" alt="Plus" class="question-answer__list-item-image">
-                        </div></li>
-                     <li class="question-answer__list-item">
+                        </div>
+                        <div class="question-answer__list-item-desc">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint tempora inventore, nam libero laboriosam suscipit, sunt excepturi commodi aspernatur sit quam dicta, quibusdam magnam. Exercitationem magni doloribus error earum recusandae!
+                        </div>  
+                    </li>
+                    <li class="question-answer__list-item">
                         <div class="question-answer__list-item-section">
-                            <h3 class="question-answer__list-item-title question-answer__list-item-title_active">Продвинутая CRM-система</h3><img src="<%=require('../images/minus.svg')%>" alt="Plus" class="question-answer__list-item-image">
-                        </div>                        
-                        <ul class="vozmognosti__info-description-list">
-                            <li class="vozmognosti__info-description-list-item"><span>LiveSklad имеет возможности продвинутой СРМ-системы</span></li>
-                            <li class="vozmognosti__info-description-list-item"><span>Для тех, кто хочет работать с клиентами эффективно, программа предоставляет множество инструментов учёта заказов, выбора по параметрам, аналитики продаж.</span></li>
-                            <li class="vozmognosti__info-description-list-item"><span>Вы сможете настроить и сделать отправку смс-сообщений вашим клиентам.</span></li>
-                            <li class="vozmognosti__info-description-list-item"><span>Автоматизация управления клиентской базой позволит улучшить качество обслуживания Ваших клиентов, увеличит рост повторных продаж и прибыльности бизнеса в целом.</span></li>
-                        </ul>                    
+                            <h3 class="question-answer__list-item-title">Продвинутая CRM-система</h3>
+                        </div>     
+                        <div class="question-answer__list-item-desc">
+                            <ul class="vozmognosti__info-description-list">
+                                <li class="vozmognosti__info-description-list-item"><span>LiveSklad имеет возможности продвинутой СРМ-системы</span></li>
+                                <li class="vozmognosti__info-description-list-item"><span>Для тех, кто хочет работать с клиентами эффективно, программа предоставляет множество инструментов учёта заказов, выбора по параметрам, аналитики продаж.</span></li>
+                                <li class="vozmognosti__info-description-list-item"><span>Вы сможете настроить и сделать отправку смс-сообщений вашим клиентам.</span></li>
+                                <li class="vozmognosti__info-description-list-item"><span>Автоматизация управления клиентской базой позволит улучшить качество обслуживания Ваших клиентов, увеличит рост повторных продаж и прибыльности бизнеса в целом.</span></li>
+                            </ul>
+                        </div>                                       
                     </li>
                     <li class="question-answer__list-item">
                         <div class="question-answer__list-item-section">
                             <h3 class="question-answer__list-item-title">Интеграция с контрольно-кассовыми терминалами, мессенджерами, сервисами</h3>
-                            <img src="<%=require('../images/fi_plus.svg')%>" alt="Plus" class="question-answer__list-item-image">
                         </div>
+                        <div class="question-answer__list-item-desc">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint tempora inventore, nam libero laboriosam suscipit, sunt excepturi commodi aspernatur sit quam dicta, quibusdam magnam. Exercitationem magni doloribus error earum recusandae!
+                        </div>  
                     </li>
                     <li class="question-answer__list-item">
                         <div class="question-answer__list-item-section">
                             <h3 class="question-answer__list-item-title">Простой и удобный интерфейс</h3>
-                            <img src="<%=require('../images/fi_plus.svg')%>" alt="Plus" class="question-answer__list-item-image">
                         </div>
+                        <div class="question-answer__list-item-desc">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint tempora inventore, nam libero laboriosam suscipit, sunt excepturi commodi aspernatur sit quam dicta, quibusdam magnam. Exercitationem magni doloribus error earum recusandae!
+                        </div>  
                     </li>
                     <li class="question-answer__list-item">
                         <div class="question-answer__list-item-section">
                             <h3 class="question-answer__list-item-title">Современные технологии</h3>
-                            <img src="<%=require('../images/fi_plus.svg')%>" alt="Plus" class="question-answer__list-item-image">
                         </div>
+                        <div class="question-answer__list-item-desc">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint tempora inventore, nam libero laboriosam suscipit, sunt excepturi commodi aspernatur sit quam dicta, quibusdam magnam. Exercitationem magni doloribus error earum recusandae!
+                        </div>  
                     </li>
                 </ul>
             </section>
@@ -882,119 +644,169 @@
                 <div class="update__title-block">
                     <h2 class="update__title font__title">Обновления</h2>
                     <nav class="navigation-arrow">
-                        <button type="button" class="navigation-arrow__button"></button>
-                        <button type="button" class="navigation-arrow__button navigation-arrow__button_rotate navigation-arrow__button_blue"></button>
+                        <button type="button" class="navigation-arrow__button navigation-arrow__button-left"></button>
+                        <button type="button" class="navigation-arrow__button navigation-arrow__button-right navigation-arrow__button_rotate navigation-arrow__button_blue"></button>
                     </nav>
                 </div>
-                <ul class="update__list">
-                    <li class="update__list-item update__list-item_pink">
+                <div class="update__list">
+                    <div class="update__list-item update__list-item_pink">
                         <img src="<%=require('../images/fi_share-2.svg')%>" alt="Транзакция" class="update__list-item-image">
                         <p class="update__list-item-description">Мы добавили новые фильтры в разделе транзакций</p>
                         <p class="update__list-item-date">20.08.2021</li>
-                    </li>
-                    <li class="update__list-item update__list-item_light-blue">
+                    </div>
+                    <div class="update__list-item update__list-item_light-blue">
                         <img src="<%=require('../images/fi_phone-call.svg')%>" alt="Телефон" class="update__list-item-image">
                         <p class="update__list-item-description">Немного доработали журнал звонков</p>
                         <p class="update__list-item-date">20.08.2021</li>
-                    </li>
-                    <li class="update__list-item update__list-item_light-fiolet">
+                    </div>
+                    <div class="update__list-item update__list-item_light-fiolet">
                         <img src="<%=require('../images/fi_layers.svg')%>" alt="Слои" class="update__list-item-image">
                         <p class="update__list-item-description">Новый виджет входящего звонка, валовая прибыль в истории чека, УПД и ТОРГ-12</p>
                         <p class="update__list-item-date">20.08.2021</li>
-                    </li>
-                    <li class="update__list-item update__list-item_light-green">
+                    </div>
+                    <div class="update__list-item update__list-item_light-green">
                         <img src="<%=require('../images/fi_settings.svg')%>" alt="Настройки" class="update__list-item-image">
                         <p class="update__list-item-description">Перенос текста в полях и сокращенное отображение системы налогообложения</p>
                         <p class="update__list-item-date">20.08.2021</li>
-                    </li>
-                </ul>
+                    </div>
+                    <div class="update__list-item update__list-item_pink">
+                        <img src="<%=require('../images/fi_share-2.svg')%>" alt="Транзакция" class="update__list-item-image">
+                        <p class="update__list-item-description">Мы добавили новые фильтры в разделе транзакций</p>
+                        <p class="update__list-item-date">20.08.2021</li>
+                    </div>
+                    <div class="update__list-item update__list-item_light-blue">
+                        <img src="<%=require('../images/fi_phone-call.svg')%>" alt="Телефон" class="update__list-item-image">
+                        <p class="update__list-item-description">Немного доработали журнал звонков</p>
+                        <p class="update__list-item-date">20.08.2021</li>
+                    </div>
+                    <div class="update__list-item update__list-item_light-fiolet">
+                        <img src="<%=require('../images/fi_layers.svg')%>" alt="Слои" class="update__list-item-image">
+                        <p class="update__list-item-description">Новый виджет входящего звонка, валовая прибыль в истории чека, УПД и ТОРГ-12</p>
+                        <p class="update__list-item-date">20.08.2021</li>
+                    </div>
+                    <div class="update__list-item update__list-item_light-green">
+                        <img src="<%=require('../images/fi_settings.svg')%>" alt="Настройки" class="update__list-item-image">
+                        <p class="update__list-item-description">Перенос текста в полях и сокращенное отображение системы налогообложения</p>
+                        <p class="update__list-item-date">20.08.2021</li>
+                    </div>
+                </div>
             </section>
             <section class="clients">
                 <div class="clients__title-block">
                     <h2 class="clients__title font__title">Наши клиенты</h2>
                     <nav class="navigation-arrow">
-                        <button type="button" class="navigation-arrow__button"></button>
-                        <button type="button" class="navigation-arrow__button navigation-arrow__button_rotate navigation-arrow__button_blue"></button>
+                        <button type="button" class="navigation-arrow__button navigation-arrow__button-left"></button>
+                        <button type="button" class="navigation-arrow__button navigation-arrow__button-right navigation-arrow__button_rotate navigation-arrow__button_blue"></button>
                     </nav>
                 </div>
                 <div class="clients__sections">
                     <div class="clients__sections-counter">
                         <p class="clients__sections-counter-text">Более</p>
                         <ul class="clients__sections-counter-items">
-                            <li class="clients__sections-counter-items-number">7</li>
-                            <li class="clients__sections-counter-items-number">4</li>
-                            <li class="clients__sections-counter-items-number">8</li>
-                            <li class="clients__sections-counter-items-number">8</li>
+                            <li id="num1" class="clients__sections-counter-items-number">7</li>
+                            <li id="num2" class="clients__sections-counter-items-number">4</li>
+                            <li id="num3" class="clients__sections-counter-items-number">8</li>
+                            <li id="num4" class="clients__sections-counter-items-number">8</li>
                         </ul>
                         <p class="clients__sections-counter-text clients__sections-counter-text_fs16">компаний уже автоматизировали свой бизнес с помощью LiveSklad</p>
                     </div>
-                    <ul class="clients__sections-organization">
-                        <li class="integration__list-item">
-                            <img src="<%=require('../images/dom.jpg')%>" alt="Дом" class="integration__list-item-image">
-                            <p class="integration__list-item-description font__descrition">Дом.ru бизнес</p>
-                        </li>
-                        <li class="integration__list-item">
-                            <img src="<%=require('../images/binotel.jpg')%>" alt="binotel" class="integration__list-item-image">
-                            <p class="integration__list-item-description font__descrition">binotel</p>
-                        </li>
-                        <li class="integration__list-item">
-                            <img src="<%=require('../images/mgts.jpg')%>" alt="МГТС" class="integration__list-item-image">
-                            <p class="integration__list-item-description font__descrition">МГТС</p>
-                        </li>
-                        <li class="integration__list-item">
-                            <img src="<%=require('../images/virgin.jpg')%>" alt="Virgin connect" class="integration__list-item-image">
-                            <p class="integration__list-item-description font__descrition">Virgin connect</p>
-                        </li>
-                        <li class="integration__list-item">
-                            <img src="<%=require('../images/kcell.jpg')%>" alt="Kcell" class="integration__list-item-image">
-                            <p class="integration__list-item-description font__descrition">Kcell</p>
-                        </li>
-                        <li class="integration__list-item">
-                            <img src="<%=require('../images/moldcell.jpg')%>" alt="Moldcell" class="integration__list-item-image">
-                            <p class="integration__list-item-description font__descrition">Moldcell</p>
-                        </li>
-                        <li class="integration__list-item">
-                            <img src="<%=require('../images/evotor.jpg')%>" alt="Эвотор" class="integration__list-item-image">
-                            <p class="integration__list-item-description font__descrition">Эвотор</p>
-                        </li>
-                        <li class="integration__list-item">
-                            <img src="<%=require('../images/1c.jpg')%>" alt="1С" class="integration__list-item-image">
-                            <p class="integration__list-item-description font__descrition">1С</p>
-                        </li>
-                    </ul>
+                    <div class="clients__sections-organization clients__sections-organization-counter">
+                        <div class="clients__sections-organization-block">
+                            <div class="integration__list-item">
+                                <img src="<%=require('../images/dom.jpg')%>" alt="Дом" class="integration__list-item-image">
+                                <p class="integration__list-item-description font__descrition">Дом.ru бизнес</p>
+                            </div>
+                            <div class="integration__list-item">
+                                <img src="<%=require('../images/binotel.jpg')%>" alt="binotel" class="integration__list-item-image">
+                                <p class="integration__list-item-description font__descrition">binotel</p>
+                            </div>
+                        </div>
+                        <div class="clients__sections-organization-block">
+                            <div class="integration__list-item">
+                                <img src="<%=require('../images/mgts.jpg')%>" alt="МГТС" class="integration__list-item-image">
+                                <p class="integration__list-item-description font__descrition">МГТС</p>
+                            </div>
+                            <div class="integration__list-item">
+                                <img src="<%=require('../images/virgin.jpg')%>" alt="Virgin connect" class="integration__list-item-image">
+                                <p class="integration__list-item-description font__descrition">Virgin connect</p>
+                            </div>
+                        </div>
+                        <div class="clients__sections-organization-block">
+                            <div class="integration__list-item">
+                                <img src="<%=require('../images/kcell.jpg')%>" alt="Kcell" class="integration__list-item-image">
+                                <p class="integration__list-item-description font__descrition">Kcell</p>
+                            </div>
+                            <div class="integration__list-item">
+                                <img src="<%=require('../images/moldcell.jpg')%>" alt="Moldcell" class="integration__list-item-image">
+                                <p class="integration__list-item-description font__descrition">Moldcell</p>
+                            </div>
+                        </div>
+                        <div class="clients__sections-organization-block">
+                            <div class="integration__list-item">
+                                <img src="<%=require('../images/evotor.jpg')%>" alt="Эвотор" class="integration__list-item-image">
+                                <p class="integration__list-item-description font__descrition">Эвотор</p>
+                            </div>
+                            <div class="integration__list-item">
+                                <img src="<%=require('../images/1c.jpg')%>" alt="1С" class="integration__list-item-image">
+                                <p class="integration__list-item-description font__descrition">1С</p>
+                            </div>
+                        </div>
+                        <div class="clients__sections-organization-block">
+                            <div class="integration__list-item">
+                                <img src="<%=require('../images/roistat.jpg')%>" alt="Roistat" class="integration__list-item-image">
+                                <p class="integration__list-item-description font__descrition">Roistat</p>
+                            </div>
+                            <div class="integration__list-item">
+                                <img src="<%=require('../images/albato.jpg')%>" alt="albato" class="integration__list-item-image">
+                                <p class="integration__list-item-description font__descrition">albato</p>
+                            </div>
+                        </div>
+                        <div class="clients__sections-organization-block">
+                            <div class="integration__list-item">
+                                <img src="<%=require('../images/atol.jpg')%>" alt="Atol" class="integration__list-item-image">
+                                <p class="integration__list-item-description font__descrition">Atol</p>
+                            </div>
+                            <div class="integration__list-item">
+                                <a href="#" class="integration__list-item-link">Еще 168 &rarr;</a>
+                            </div>
+                        </div>
+                        
+                    </div>
                 </div>
-                </section>
-                <section class="crm">
+            </section>
+            <section class="crm">
                     <h3 class="crm__title">Облачная CRM система для малого бизнеса</h3>
                     <p class="crm__description">Как проще всего управлять бизнес-процессами? Конечно, с помощью специального программного обеспечения - CRM.</p>
                     <p class="crm__description">CRM расшифровывается как система управления взаимоотношений с клиентами. А проще говоря – программа, выполняющая функции менеджера.</p>
                     <p class="crm__description">Современные CRM обладают настолько широким функционалом, что могут свободно заменить нескольких человек в штате компании. Для малого и среднего бизнеса это особенно важно. Поэтому установка таких программ выгодна со всех сторон...</p>
                     <div class="crm__down"></div>
-                </section>
+                    <div class="crm__down-info">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore magnam ipsa tempore itaque recusandae inventore, quidem non ipsum iste modi, dolorem, commodi rerum! Libero aliquid voluptatum ipsum! Laborum, impedit consectetur.
+                    </div>
+            </section>
         </main>
-
         <footer class="footer">
             <div class="footer__main">
                 <img src="<%=require('../images/logo_white.png')%>" class="logo footer__logo" alt="Лого">
                 <nav class="footer__navigation">
-                    <ul class="footer__navigation-list">
+                    <ul class="footer__navigation-list footer__navigation-list-site">
                         <li class="footer__navigation-list-item"><a href="#" class="footer__navigation-list-item-link footer__navigation-list-item-link_header">Информация</a></li>
                         <li class="footer__navigation-list-item"><a href="#" class="footer__navigation-list-item-link">Реквизиты</a></li>
                         <li class="footer__navigation-list-item"><a href="#" class="footer__navigation-list-item-link">Пользовательское соглашение</a></li>
                         <li class="footer__navigation-list-item"><a href="#" class="footer__navigation-list-item-link">Политика конфидициальности</a></li>
                         <li class="footer__navigation-list-item"><a href="#" class="footer__navigation-list-item-link">Карта сайта</a></li>
                     </ul>
-                    <ul class="footer__navigation-list">
+                    <ul class="footer__navigation-list footer__navigation-list-cabinet">
                         <li class="footer__navigation-list-item"><a href="#" class="footer__navigation-list-item-link footer__navigation-list-item-link_header">Кабинет</a></li>
                         <li class="footer__navigation-list-item"><a href="#" class="footer__navigation-list-item-link">Войти</a></li>
                         <li class="footer__navigation-list-item"><a href="#" class="footer__navigation-list-item-link">Создать учетную запись</a></li>
                     </ul>
-                    <ul class="footer__navigation-list">
+                    <ul class="footer__navigation-list footer__navigation-list-techhelp">
                         <li class="footer__navigation-list-item"><a href="#" class="footer__navigation-list-item-link footer__navigation-list-item-link_header">Техподдержка</a></li>
                         <li class="footer__navigation-list-item"><a href="#" class="footer__navigation-list-item-link">База знаний</a></li>
                         <li class="footer__navigation-list-item"><a href="#" class="footer__navigation-list-item-link">Обучающие видео</a></li>
                     </ul>
-                    <ul class="footer__navigation-list">
+                    <ul class="footer__navigation-list footer__navigation-list-info">
                         <div class="footer__info">                    
                             <ul class="footer__info-list">
                                 <li class="footer__contacts-item"><p class="footer__contacts-item-text footer__contacts-header-text">8 (800) 551-50-70</p></li>
@@ -1011,7 +823,7 @@
                     </ul>
                 </nav>
 
-                <button type="button" class="button button__blue button_footer">Свяжитесь с нами</button>
+                <button type="button" class="button__free button button__blue button_footer">Свяжитесь с нами</button>
             </div>
             <div class="footer__copyright">
                 <p class="footer__copyright-text">ИП Новиков В.Ф. Все права защищены</p>
@@ -1020,6 +832,7 @@
         </footer>
     </section>
     
-
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </body>
 </html>
