@@ -1,39 +1,51 @@
 .doyouknow {
-    margin-top: 66px;
-    margin-right: 75px;
-    margin-left: 75px;
+    margin-top: calc(46px + (66 - 46) * ((110vw - 360px) / (1440 - 360)));
+    margin-left: calc(20px + (75 - 20) * ((110vw - 360px) / (1440 - 360)));
+    margin-right: calc(20px + (75 - 20) * ((110vw - 360px) / (1440 - 360)));
     position: relative;
     background: linear-gradient(97.54deg, #538DFF 0%, #865BFF 100%);
     border-radius: 20px;
     padding: 30px;
+    @media screen and (max-width: 840px) {
+        padding: 20px;
+    }
 
     &__title {
         margin: 0;
         max-width: 842px;
         font-weight: bold;
-        font-size: 36px;
-        line-height: 44px;
+        font-size: calc(18px + (36 - 18) * ((110vw - 360px) / (1440 - 360)));
+        line-height: calc(22px + (44 - 22) * ((110vw - 360px) / (1440 - 360)));
         color: #FFFFFF
     }
     &__button {
         margin-left: -9px;
         margin-top: 22px;
+        @media screen and (max-width: 400px) {
+            margin-left: 0;
+        }
     }
 
     &__description {
         margin: 0;
-        margin-top: 30px;
+        margin-top: calc(14px + (30 - 14) * ((110vw - 360px) / (1440 - 360)));
         font-weight: 500;
-        font-size: 20px;
+        font-size: calc(14px + (20 - 14) * ((110vw - 360px) / (1440 - 360)));
         line-height: 24px;
         color: #FFFFFF;
+        
     }
 
     &__image {
+        width: calc(280px + (659 - 280) * ((110vw - 360px) / (1440 - 360)));
         position: absolute;
-        height: 100%;
-        top: 0;
-        right: -15px;
+        bottom: 0;
+        right: -40px;
+        @media screen and (max-width: 780px) {
+            position: relative;
+            right: 0;
+            width: 100%;
+        }
     }
 
     &__list {
@@ -44,39 +56,89 @@
         display: flex;
         row-gap: 20px;
         flex-wrap: wrap;
-        max-width: 640px;
+        max-width: calc(400px + (640 - 400) * ((110vw - 948px) / (1440 - 948)));
+        @media screen and (max-width: 780px) {
+            max-width: 100%;
+        }
 
         &-item {
             display: flex;
             align-items: center;
             font-weight: normal;
-            font-size: 16px;
+            font-size: calc(12px + (16 - 12) * ((110vw - 360px) / (1440 - 360)));
             line-height: 20px;
             color: #FFFFFF;
             margin-right: 60px;
-
+            @media screen and (max-width: 840px) {
+                margin-right: 10px;
+            }
+            @media screen and (max-width: 780px) {
+                max-width: 100%;
+            }
+    
             &:last-child {
                 margin-right: 0;
             }
 
             &-zakaz::before {
-                content: url(../images/zakazi.svg);
+                content: '';
+                background-image: url('../images/zakazi.svg');
+                width: calc(20px + (32 - 20) * ((110vw - 360px) / (1440 - 360)));
+                height: calc(20px + (32 - 20) * ((110vw - 360px) / (1440 - 360)));
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                left: 0px;
                 margin-right: 14px;
+                @media screen and (max-width: 780px) {
+                    margin-right: 8px;
+                }
             }
 
             &-ostatki::before {
-                content: url(../images/clipboard.svg);
+                content: '';
+                background-image: url('../images/clipboard.svg');
+                width: calc(20px + (32 - 20) * ((110vw - 360px) / (1440 - 360)));
+                height: calc(20px + (32 - 20) * ((110vw - 360px) / (1440 - 360)));
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                left: 0px;
                 margin-right: 14px;
+                @media screen and (max-width: 780px) {
+                    margin-right: 8px;
+
+                }
             }
 
             &-klienti::before {
-                content: url(../images/users.svg);
+                content: '';
+                background-image: url('../images/users.svg');
+                width: calc(20px + (32 - 20) * ((110vw - 360px) / (1440 - 360)));
+                height: calc(20px + (32 - 20) * ((110vw - 360px) / (1440 - 360)));
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                left: 0px;
                 margin-right: 14px;
+                @media screen and (max-width: 780px) {
+                    margin-right: 8px;
+                }
             }
 
             &-sprav::before {
-                content: url(../images/book.svg);
+                content: '';
+                background-image: url('../images/book.svg');
+                width: calc(20px + (32 - 20) * ((110vw - 360px) / (1440 - 360)));
+                height: calc(20px + (32 - 20) * ((110vw - 360px) / (1440 - 360)));
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                left: 0px;
                 margin-right: 14px;
+                @media screen and (max-width: 780px) {
+                    margin-right: 8px;
+                }
             }
         }
     }

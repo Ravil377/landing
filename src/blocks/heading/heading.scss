@@ -1,121 +1,232 @@
 .heading {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 27px;
-    padding-left: 75px;
-    padding-right: 75px;
-
-    &__element {
-        display: flex;
-        position: absolute;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 17px;
-        color: #FFFFFF;
+    padding-left: calc(20px + (75 - 20) * ((110vw - 360px) / (1440 - 360)));
+    padding-right: calc(20px + (75 - 20) * ((110vw - 360px) / (1440 - 360)));
+    padding-bottom: 7px;
+    margin-top: 34px;
+    @media screen and (max-width: 1100px) {
+        margin-top: 60px;
     }
-
-    &__vedenie-zakazov {
-        justify-content: center;
-        align-items: center;
-        max-width: 61px;
-        top: 274px;
-        left: 109px;
-
-        &::before {
-            content:url('../images/vedenie-zakazov.svg');
-            margin-right: 19px;
-        }
+    @media screen and (max-width: 1100px) {
+        margin-top: 40px;
     }
-
-    &__road-sklad {
-        right: 136px;
-        top: 370px;
-    }
-
-    &__sklad {
-        top: 274px;
-        right: 108px;
-        margin-top: 4px;
-        flex-direction: column;
-        align-items: center;
-        &::before {
-            content:url('../images/sklad.svg');
-        }
-    }
-
-    &__integration {
-        top: 820px;
-        left: 82px;
-        color: #538DFF;
-        flex-direction: column;
-        align-items: center;
-        &::before {
-            content:url('../images/integration.svg');
-        }
-    }
-
-    &__postavshiki {
-        top: 731px;
-        right: 87px;
-        color: #538DFF;
-        flex-direction: column;
-        align-items: center;
-
-        &-circle {
-            right: 116px;
-            top: 606px;
-        }
-
-        &::before {
-            content:url('../images/postavshik.svg');
-        }
-    }
-
-    &__magazin {
-        top: 478px;
-        left: 74px;
-        margin-top: 4px;
-        flex-direction: column;
-        align-items: center;
-        &::before {
-            content:url('../images/magazin.svg');
-        }
-
-        &-circle {
-            left: 103px;
-            top: 364px;
-        }
-    }
-
     &__title {
-        max-width: 1100px;
-        margin: 0 auto;
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+        line-height: calc(24px + (55 - 24) * ((110vw - 360px) / (1440 - 360)));
+        font-size: calc(20px + (45 - 20) * ((110vw - 360px) / (1440 - 360)));
         text-align: center;
-        @extend .font__title;
-
-        &_white {
-            color: #fff;
+        color: #FFFFFF;
+        @media screen and (max-width: 1100px) {
+            margin-top: 70px;
         }
     }
-
     &__description {
         margin: 0 auto;
         margin-top: 20px;
         max-width: 785px;
+        font-weight: normal;
+        font-size: calc(14px + (16 - 14) * ((110vw - 360px) / (1440 - 360)));
+        line-height: calc(17px + (20 - 17) * ((110vw - 360px) / (1440 - 360)));
         text-align: center;
-        @extend .font__descrition;
-        &_white {
-            color: #fff;
+        color: #FFFFFF;
+        @media screen and (max-width: 400px) {
+            margin-top: 16px;
         }
     }
-
     &__button {
+        cursor: pointer;
+        display: block;
         margin: 0 auto;
+        border: 0;
         margin-top: 30px;
+        padding: 21px 30px;
+        box-shadow: 12px 17px 50px rgba(0, 0, 0, 0.13);
+        border-radius: 59px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        color: $text-color-black;
+        &_yellow {
+            background-color: $button-color-yellow;
+        }
+        &:hover {
+            background: #FFD97D;
+            box-shadow: 12px 17px 50px rgba(0, 0, 0, 0.13);
+        }
+        @media screen and (max-width: 600px) {
+            bottom: -130px;
+            position:absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &__interface {
+        position: relative;
+        z-index: 1;
+        display: block;
+        margin: 0 auto;
+        margin-top: 60px;
+        width: 83%;
+        border: 11px solid #000000;
+        box-sizing: border-box;
+        box-shadow: 20px 26px 91px rgba(47, 53, 80, 0.23);
+        border-radius: 25px;
+
+        &-container {
+            position: relative;
+        }
+        @media screen and (max-width: 1100px) {
+            border: 5px solid #000000;
+        }
+        @media screen and (max-width: 400px) {
+            margin-top: 30px;
+        }
     }
 }
 
+.heading__vedenie-zakazov {
+    max-width: 5%;
+    top: -52px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    @media screen and (max-width: 850px) {
+        display: none;
+    }
 
+    &::before {
+        content: url('../images/vedenie-zakazov.svg');
+        margin-right: 19px;
+        width: 54px;
+        height: 54px;
+    }
+}
 
+.heading__sklad {
+    right: 2px;
+    max-width: 5%;
+    top: -52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    @media screen and (max-width: 850px) {
+        display: none;
+    }
+
+    &::before {
+        content: url('../images/sklad.svg');
+        width: 54px;
+        height: 54px;
+    }
+}
+
+.heading__magazin {
+    top: 152px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    @media screen and (max-width: 850px) {
+        display: none;
+    }
+    &::before {
+        content: url('../images/magazin.svg');
+        display: flex;
+        justify-content: center;
+        width: 54px;
+        height: 54px;
+        margin: -15px;
+    }
+}
+
+.heading__integration {
+    left: -36px;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #538DFF;
+    @media screen and (max-width: 850px) {
+        display: none;
+    }
+    &::before {
+        content: url('../images/integration.svg');
+        display: flex;
+        justify-content: center;
+        width: 54px;
+        height: 54px;
+    }
+}
+
+.heading__postavshiki {
+    right: -36px;
+    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #538DFF;
+    @media screen and (max-width: 850px) {
+        display: none;
+    }
+    &::before {
+        content: url('../images/postavshik.svg');
+        display: flex;
+        justify-content: center;
+        width: 54px;
+        height: 54px;
+    }
+}
+.heading__magazin-circle {
+    top: 23px;
+    position: absolute;
+    left: 30px;
+    @media screen and (max-width: 850px) {
+        display: none;
+    }
+}
+
+.heading__postavshiki-circle {
+    top: 278px;
+    position: absolute;
+    right: -13px;
+    @media screen and (max-width: 850px) {
+        display: none;
+    }
+}
+
+.heading__road-sklad {
+    top: 23px;
+    position: absolute;
+    right: 28px;
+    @media screen and (max-width: 850px) {
+        display: none;
+    }
+}

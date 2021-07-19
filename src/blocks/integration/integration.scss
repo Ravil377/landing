@@ -1,10 +1,19 @@
 .integration {
-    padding-left: 75px;
-    padding-right: 75px;
-    margin-top: 70px;
-    padding-bottom: 47px;
+    overflow: hidden;
+    padding-left: calc(20px + (75 - 20) * ((110vw - 360px) / (1440 - 360)));
+    padding-right: calc(20px + (75 - 20) * ((110vw - 360px) / (1440 - 360)));
+    margin-top: calc(40px + (70 - 40) * ((110vw - 360px) / (1440 - 360)));
     
+    &__title {
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+        line-height: calc(24px + (55 - 24) * ((110vw - 360px) / (1440 - 360)));
+        font-size: calc(20px + (45 - 20) * ((110vw - 360px) / (1440 - 360)));
+        color: #000000;
+    }
     &__list {
+        list-style: none;
         padding: 0;
         margin: 0;
         margin-top: 40px;
@@ -12,35 +21,53 @@
         grid-template-columns: repeat(6, 1fr);
         row-gap: 22px;
         column-gap: 30px;
+
+
+        
+        &-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            list-style: none;
+            height: 117px;
+            transition: opacity .5s;
+            &-link {
+                display: block;
+                margin-top: 36px;
+                text-decoration: none;
+                @extend .font__descrition;
+                font-weight: 700;
+                color: $text-color-link;
+            }
+            &:hover {
+                opacity: .5;
+            }
+    
+            &-description {
+                color: #84899B;
+                margin: 0;
+            }
+    
+            &-image {
+                margin-top: 12px;
+                max-width: 132px;
+                max-height: 69px;
+                object-fit: cover;
+            }
+
+        }
+    
     }
+}
 
-    &__list-item {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        list-style: none;
-        height: 117px;
-
-        &-description {
-            color: #84899B;
-            margin: 0;
-        }
-
-        &-image {
-            margin-top: 12px;
-            max-width: 132px;
-            max-height: 69px;
-            object-fit: cover;
-        }
-
-        &-link {
-            display: block;
-            margin-top: 36px;
-            text-decoration: none;
-            @extend .font__descrition;
-            font-weight: 700;
-            color: $text-color-link;
-        }
+@media screen and (max-width: 510px) {
+    .integration .integration__list-item:nth-child(2n) {
+        display: none;
     }
-
+    .integration .integration__list-item:nth-child(11) {
+        display: none;
+    }
+    .integration .integration__list-item:nth-child(12) {
+        display: block;
+    }
 }

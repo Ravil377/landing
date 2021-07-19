@@ -1,72 +1,93 @@
 .vozmognosti {
-    padding-left: 75px;
-    padding-right: 75px;
+    margin: 0;
+    padding: 0;
+    padding-left: calc(20px + (75 - 20) * ((110vw - 360px) / (1440 - 360)));
+    padding-right: calc(20px + (75 - 20) * ((110vw - 360px) / (1440 - 360)));
+    margin-top: calc(40px + (180 - 40) * ((110vw - 360px) / (1080 - 360)));
 
     &__title {
-        @extend .font__title;
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+        line-height: calc(24px + (55 - 24) * ((110vw - 360px) / (1440 - 360)));
+        font-size: calc(20px + (45 - 20) * ((110vw - 360px) / (1440 - 360)));
+        color: $color-title-black;
     }
-
     &__info {
+        position: relative;
+        
+        &-description {
+            padding: 30px;
+            background: #F8F8FA;
+            border-radius: 20px;
+            height: 398px;
+            display: none;
+            position: absolute;
+            margin-top: 40px;
+            top: 0;
+            margin-left: calc(320px + (438 - 320) * ((110vw - 360px) / (1440 - 360)));
+            @media screen and (max-width: 900px) {
+                height: auto;
+                position: relative;
+                margin: 0;
+            }
+
+            &-title {
+                margin: 0;
+                font-weight: bold;
+                font-size: 26px;
+                line-height: 32px;
+                color: #538DFF;
+            }
+
+            &_active {
+                display: block;
+            }
+        }
         display: flex;
-        justify-content: space-between;
-        margin-top: 40px;
-    }
-    &__info-navigation {
-        max-width: 387px;
-        width: 100%;
-        margin-right: 28px;
-    }
-    &__info-navigation-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
+        &-navigation {
+            margin-top: 40px;
+            max-width: calc(320px + (410 - 320) * ((110vw - 360px) / (1440 - 360)));
+            width: 100%;
+            @media screen and (max-width: 900px) {
+                max-width: 100%;
+                margin-top: 20px;
+            }
 
-        &-item {
-            margin-bottom: 9px;
-
-            &:last-child {
-                margin-bottom: 0;
+            &-list {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                &-item {
+                    padding-left: 23px;
+                    cursor: pointer;
+                    margin-bottom: 9px;
+                    display: flex;
+                    align-items: center;
+                    height: 69px;
+                    background: #B9CFFE;
+                    border-radius: 14px;
+                    transition: all .5s;
+                    &_active {
+                        background: linear-gradient(97.54deg, #538DFF 0%, #865BFF 100%);
+                        & .vozmognosti__info-navigation-list-item-title {
+                            color: white;
+                        }
+                    }
+                    &-title {
+                        text-align: left;
+                        font-weight: bold;
+                        font-size: calc(14px + (16 - 14) * ((110vw - 360px) / (1440 - 360)));
+                        line-height: calc(17px + (20 - 17) * ((110vw - 360px) / (1440 - 360)));
+                        color: #3E454D;
+                        max-width: 250px;
+                    }
+                    &:hover {
+                        background: #78A6FF;
+                        box-shadow: 12px 17px 50px rgba(0, 0, 0, 0.13);
+                    }
+                }
             }
         }
     }
-    
-  
-    &__info-description {
-        padding: 0;
-        margin: 0;
-        padding-left: 53px;
-        padding-top: 29px;
-        width: -webkit-fill-available;
-        background: #F8F8FA;
-        border-radius: 20px;
-        &-title {
-            @extend .font__razdel;
-        }
-    }
-
-    &__info-description-list {
-        padding: 0;
-        margin: 0;
-        margin-top: 30px;
-        list-style: disc;
-        margin-left: 20px;
-        color: #0084F4;
-
-        span {
-            color: #84899B;
-            margin-left: -8px;
-        }
-
-        &-item {
-            margin-bottom: 20px;
-            @extend .font__descrition;
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-    }
-
-    
-    
 }

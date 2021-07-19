@@ -9,6 +9,12 @@
         background-image: url('../images/fi_arrow-left.svg');
         background-repeat: no-repeat;
         background-position: center;
+        cursor: pointer;
+        transition: opacity .5s;
+
+        &:hover {
+            opacity: .5;
+        }
 
         &_rotate {            
             border-radius: 0px 6px 6px 0px;

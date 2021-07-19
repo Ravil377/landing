@@ -1,0 +1,271 @@
+.popup {
+    display: flex;
+    height: 0;
+    opacity: 0;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    transition: .5s, height 0s .5s;
+
+    &__input {
+        position: relative;
+        padding: 17px 39px 20px 16px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 17px;
+        margin: 0 auto;
+        margin-top: 20px;
+        display: block;
+        width: -webkit-fill-available;
+        border: none;
+        border: 1px solid #DEE1EA;
+        box-sizing: border-box;
+        border-radius: 10px;
+
+        &_arrowdown {
+            cursor: pointer;
+            transition: opacity .5s;
+
+            &:hover {
+                opacity: .6;
+            }
+            &::after {
+                content:'';
+                position: absolute;
+                right: 24px;
+                top: 50%;
+                background-image: url('../images/down_arrow.svg');
+                background-position: right;
+                background-repeat: no-repeat;
+                width: 9px;
+                height: 5px;
+            }
+        }
+        &-list {
+            display: none;
+            padding: 0;
+            border: 1px solid #DEE1EA;
+            border-radius: 10px;
+            margin: 0;
+            &_opened {
+                display: block;
+            }
+        }
+        &_select {
+            cursor: pointer;
+            margin-top: 0;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+            color: #1C1C25;
+            border: 0;
+            border-radius: 0;
+            border-bottom: 1px solid #DEE1EA;
+            transition: opacity .5s;
+
+            &:hover {
+                opacity: .6;
+            }
+
+            &:last-child {
+                border: 0;
+            }
+
+        }
+    }
+    &__button-close {
+        cursor: pointer;
+        position: absolute;
+        top: 30px;
+        right: 26px;
+        border: 0;
+        width: 38px;
+        height: 38px;
+        background-image: url('../images/close.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: rgba(0,0,0,0);
+        transition: opacity .5s;
+        &:hover {
+            opacity: .6;
+        }
+    }
+    &_opened {
+        height: 100%;
+        opacity: 1;
+        transition: opacity .5s;
+    }
+
+    &__container {
+        padding: 33px 26px;
+        padding-bottom: 30px;
+        position: relative;
+        width: 454px;
+        background: #FFFFFF;
+        border-radius: 25px;
+        
+        &-submit-button {
+            width: 100%;
+            height: 60px;
+            margin-top: 20px;
+            border: 0;
+            background: #FFCF5C;
+            box-shadow: 12px 17px 50px rgba(0, 0, 0, 0.13);
+            border-radius: 59px;
+            transition: opacity .5s;
+
+            &:hover {
+                opacity: .6;
+            }
+        }
+
+        &-title {
+            margin: 0;
+            font-weight: bold;
+            font-size: 26px;
+            line-height: 32px;
+            color: #1C1C25;
+        }
+
+        &-description {
+            margin: 0;
+            margin-top: 33px;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 20px;
+            color: #000000;
+            
+            &-rules {
+                margin: 0;
+                margin-top: 20px;
+                font-weight: normal;
+                font-size: 12px;
+                line-height: 15px;
+                color: #84899B
+            }
+        }
+    }
+
+}
+
+
+.popup-burger {
+    display: flex;
+    height: 0;
+    opacity: 0;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    transition: .5s, height 0s .5s;
+    &_black {
+        color: black;
+    }
+    &__contacts {
+        margin: 0;
+        margin-top: 172px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__button {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 264px;
+        height: 60px;
+        background: #538DFF;
+        box-shadow: 12px 17px 50px rgba(0, 0, 0, 0.13);
+        border-radius: 51px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: #FFFFFF;
+        border: 0;
+        transition: all .5s;
+
+        &:hover {
+            background: #78A6FF;
+            box-shadow: 12px 17px 50px rgba(0, 0, 0, 0.13);
+        }
+    }
+
+    &__button-close {
+        position: absolute;
+        margin-top: 40px;
+        right: 25px;
+        cursor: pointer;
+        width: 61px;
+        height: 48px;
+        border: 0;
+        background-color: white;
+        border-radius: 25px 0px 0px 25px;
+        margin-right: -25px;
+        background-image: url('../images/fi_x.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: opacity .5s;
+        &:hover {
+            opacity: .5;
+        }
+    }
+    &_opened {
+        height: 100%;
+        opacity: 1;
+        transition: opacity .5s;
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 33px 26px;
+        padding-bottom: 30px;
+        position: relative;
+        width: 100%;
+        background: #FFFFFF;
+        border-radius: 25px;
+
+        &-menu {
+            margin: 0;
+            padding: 0;
+            margin-top: 94px;
+            display: flex;
+            gap: 40px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            &-item {
+
+                &-link {
+                    text-decoration: none;
+                    font-weight: 500;
+                    font-size: 20px;
+                    line-height: 24px;
+                    color: #000000;
+                    transition: opacity .5s;
+
+                    &:hover {
+                        opacity: .5;
+                    }
+                }
+            }
+        }
+    }
+}

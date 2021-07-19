@@ -3,6 +3,28 @@
     border-color: #F8F8FA;
     font-style: normal;
 }
+$text-color-white: #FFF;
+$text-color-blue: #538DFF;
+$text-color-black: #000;
+$button-color-yellow: #FFCF5C;
+$color-title-black: #1C1C25;
+.title__font {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 55px; 
+}
+
+@media screen and (max-width: 320px) {
+    .title__font {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        color: #1C1C25
+    }
+} 
+
 
 $background-color-card: #FFFFFF; 
 $background-color-card-description: #3E454D;
@@ -66,8 +88,9 @@ $text-color-link: #647CFF;
     margin: 0;
     @extend .font_bold;
     color: $text-color-black;
-    font-size: 45px;
-    line-height: 55px;
+    font-size: calc(24px + (45 - 24) * ((110vw - 320px) / (1440 - 320)));
+    line-height: calc(24px + (55 - 24) * ((110vw - 320px) / (1440 - 320)));
+    
 }
 
 .font__descrition {
